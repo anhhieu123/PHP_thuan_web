@@ -1,0 +1,10 @@
+<?php
+$pattern="/^[A-z]{2,12}\d{2,3}@wru\.vn$/";
+$str="hieunt621@wru.vn";
+if(preg_match($pattern,$str)){
+    echo'hople';
+}
+else{
+    echo'thatbai';
+}
+?>
