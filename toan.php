@@ -17,7 +17,7 @@
             }
             else{
                 
-                $sai++; break;
+                $sai++;
             }
             }	
         }

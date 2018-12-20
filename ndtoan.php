@@ -1,19 +1,18 @@
 <?php
     include('heade.php');
-    include('slide.php');
 ?>
     <div id="header">
         <div class="content">
             <div id="thuvien" style="margin:40px 10px 10px 30px ">
-            <a href='ndtoan.php'><img src='hinhanh/toan.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/ly.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/hoa.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/sinhhoc.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/van.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/tienganh.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/dialy.png'/></a>  
-            <a href='ndly.php'><img src='hinhanh/gdcd.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/lichsu.png'/></a> 
+                <?php
+                    require('connection.php');
+                    $sql="select id_t,img_t from toan";
+                    $result=mysqli_query($conn,$sql);
+                    while($data = mysqli_fetch_assoc($result)){?>
+                    <?php
+                    echo"<a href='cttoan.php?id=$data[id_t]'><img src='hinhanh/$data[img_t]'/></a>";
+                    }
+                ?>   
             </div>
                
         </div>
@@ -34,12 +33,7 @@
                       <li>
                         <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Hóa học THPT Lê Duẩn</a>
                       </li>
-                      <li>
-                        <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Toán trường THPT Vĩnh Yên</a>
-                        </li>
-                      <li>
-                       <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Toán trường THPT Vĩnh Yên</a>
-                      </li>
+                     
                     </ul>
               </div>
              

@@ -1,19 +1,24 @@
 <?php
     include('heade.php');
-    include('slide.php');
 ?>
     <div id="header">
         <div class="content">
             <div id="thuvien" style="margin:40px 10px 10px 30px ">
-            <a href='ndtoan.php'><img src='hinhanh/toan.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/ly.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/hoa.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/sinhhoc.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/van.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/tienganh.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/dialy.png'/></a>  
-            <a href='ndly.php'><img src='hinhanh/gdcd.png'/></a> 
-            <a href='ndly.php'><img src='hinhanh/lichsu.png'/></a> 
+                <?php
+                    require('connection.php');
+                    $id=$_GET["id"];
+                    $sql="select id_t,nd_toan, tieude_t from toan where id_t=$id";
+                    $result=mysqli_query($conn,$sql);
+                    while($data = mysqli_fetch_assoc($result)){?>
+                    <?php
+                    echo"<h1><p style='color:red;'>$data[tieude_t]</p></h1>";
+                    echo"<br/> <br/>";
+                    echo"$data[nd_toan]";
+                    } 
+                ?> 
+                <br/>
+                <br/>
+                <a href="ndtoan.php" ><p style='color:red;text-alig:center;'>>>Quay lại<<</p> </a>
             </div>
                
         </div>

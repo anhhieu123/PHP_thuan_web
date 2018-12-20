@@ -22,10 +22,7 @@ if(isset($_POST['ok']))
             exit();
         }
     }
-require('../connection.php');
-$sql="select tencm from chuyenmuc where id_cm=$id";
-$result=mysqli_query($conn,$sql);
-$data=mysqli_fetch_assoc($result);
+
 ?>
     <div id="wapper2">
         <fieldset style="width:27px; margin=20px auto 10px;">
