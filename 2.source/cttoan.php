@@ -1,21 +1,66 @@
 <?php
+    session_start();
     include('heade.php');
-    include('slide.php');
+    $loi=array();
+    $loi["name"]=$loi["mess"]=null;
+    $name=$mess=null;
+    if(isset($_POST["ok"])){
+        if(empty($_POST["txtname"])){
+            $loi["name"]="* vui lòng nhập tên<br/>";
+        }else{
+            $name=$_POST["txtname"];
+        }
+
+        if(empty($_POST["txtmess"])){
+            $loi["mess"]="* vui lòng nhập mess<br/>";
+        }else{
+            $mess=$_POST["txtmess"];
+        }
+        if($name && $mess){
+
+        }
+
+    }
+
 ?>
     <div id="header">
         <div class="content">
             <div id="thuvien" style="margin:40px 10px 10px 30px ">
                 <?php
                     require('connection.php');
-                    $sql="select img_td from tieudemon";
+                    $id=$_GET["id"];
+                    $sql="select id_t,nd_toan, tieude_t from toan where id_t=$id";
                     $result=mysqli_query($conn,$sql);
                     while($data = mysqli_fetch_assoc($result)){?>
                     <?php
-                    echo"<a href='chitiet.php'><img src='hinhanh/$data[img_td]'/></a>";
-                    }
-                ?>   
+                    echo"<h1><p style='color:red;'>$data[tieude_t]</p></h1>";
+                    echo"<br/> <br/>";
+                    echo"$data[nd_toan]";
+                    } 
+                ?> 
+                <br/>
+                <br/>
             </div>
-               
+            <fieldset>
+                <legend>Comment</legend>           
+                    <form action="cttoan.php" method="post">
+                        <table>
+                            <tr>
+                                <td>Name</td>
+                                <td><input type="text" size="25" name="txtname"/></td>
+                            </tr>
+                            <tr>
+                                <td>Mess</td>
+                                <td><textarea cols="60" rows="5" name="txtmess"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="submit" value="Submit" name="ok"/></td>
+                            </tr>
+                        </table>
+                     </form>
+                </fieldset>
+            <a href="ndtoan.php" ><p style='color:red;text-alig:center;'>>>Quay lại<<</p> </a> 
         </div>
 
         <div class="sidebar">

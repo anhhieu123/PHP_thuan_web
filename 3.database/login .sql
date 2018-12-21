@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2018 at 05:05 PM
+-- Generation Time: Dec 21, 2018 at 04:56 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -82,6 +82,21 @@ INSERT INTO `chuyenmuc` (`id_cm`, `tencm`) VALUES
 (5, 'Mẹo Học Hay'),
 (6, 'Trợ Giúp'),
 (7, 'Tin giáo dục\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `cm_id` int(10) UNSIGNED NOT NULL,
+  `name` int(50) NOT NULL,
+  `message` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `time` date NOT NULL,
+  `cm_check` varchar(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id_t` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -240,7 +255,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `lever`) VALUES
 (3, 'admin', 'hathingocanh1998@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 2),
-(4, 'anhhieu1', 'hathingocanh1998@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 1);
+(4, 'anhhieu1', 'hathingocanh1998@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 1),
+(5, 'admin12', 'hathingocanh1998@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 1);
 
 --
 -- Indexes for dumped tables
@@ -257,6 +273,12 @@ ALTER TABLE `cauhoi1`
 --
 ALTER TABLE `chuyenmuc`
   ADD PRIMARY KEY (`id_cm`);
+
+--
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`cm_id`);
 
 --
 -- Indexes for table `onthidaihoc`
@@ -312,6 +334,12 @@ ALTER TABLE `chuyenmuc`
   MODIFY `id_cm` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `cm_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `onthidaihoc`
 --
 ALTER TABLE `onthidaihoc`
@@ -345,7 +373,7 @@ ALTER TABLE `toan`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
