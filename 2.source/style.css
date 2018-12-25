@@ -40,7 +40,7 @@ body{
 	margin-right:8px;
 }
 #top-right{
-	padding-top:10px; 
+	padding-top:5px; 
 	float:right;
 }
 #top-right ul{
@@ -109,7 +109,7 @@ body{
 	height:44px;
 	width:1000px;
 	background:#FC6;
-	margin:15px auto;
+	margin:20px auto;
 
 }
 #menu ul li{

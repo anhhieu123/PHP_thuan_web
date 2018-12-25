@@ -29,14 +29,18 @@
                 $query = mysqli_query($conn,$sql);
                 if (mysqli_num_rows($query)==1) {
                     $data=mysqli_fetch_assoc($query);
-                    $_SESSION['lever']=$data ["lever"];
-                    if($_SESSION['lever']==2){
-                        header("location:admin/admin.php");
-                        exit();
-                    }else
-                        {$_SESSION["username"]=$username;
-                        header("location:index.php");
-                        exit();
+                    if($data['trangthai']==1){
+                        $_SESSION['lever']=$data ["lever"];
+                        if($_SESSION['lever']==2){
+                            header("location:admin/admin.php");
+                            exit();
+                        }else{
+                            $_SESSION["username"]=$username;
+                            header("location:index.php");
+                            exit();
+                        }
+                    }else{
+                        $loi["login"]="* Tài khoản của bạn chưa kích hoạt, vui lòng kiểm tra email";
                     }
                 }else{
                     $loi["login"]="*username or password không đúng ";

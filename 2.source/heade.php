@@ -64,13 +64,10 @@
                         <li><a href="#" >Văn Học</a></li>
                 </ul>
             </li>
-            <?php
-                require("connection.php");
-                $sql="select tencm from chuyenmuc";
-                $result=mysqli_query($conn,$sql);
-                while($data=mysqli_fetch_assoc($result)){
-                echo"<li><a href='#'>$data[tencm]</a></li>";
-                }
-           ?>
+            <li><a href="#" >Đề Trắc Nghiệm</a></li>
+            <li><a href="#" >Mẹo học hay</a></li>
+            <li><a href="#" >Tin giáo dục</a></li>
+            <li><a href="#" >Forum</a></li>
+            <li><a href="#" >Trợ giúp</a></li>
         </ul>
     </div>

@@ -1,11 +1,12 @@
 <?php
     include('heade.php');
-    include('slide.php');
 ?>
     <div id="header">
         <div class="content">
             <div id="thuvien" style="margin:40px 10px 10px 30px ">
-              <?php 
+                <?php
+                if(isset($_GET["id_mh"])){
+                  $id = $_GET ["id_mh"];} 
                    //khai báo biến host
                   $hostName = 'localhost';
                   // khai báo biến username
@@ -22,16 +23,16 @@
                       exit('Kết nối không thành công. chi tiết lỗi:' . $connect->connect_error);
                   }
                 mysqli_query($connect,"SET NAMES 'UTF8'");
-                $sql = "SELECT * FROM monhoc ";
+                $sql = "SELECT * FROM noidungmon WHERE id_mh = $id ";
                 $result = mysqli_query($connect,$sql);  
                 if(mysqli_num_rows($result)>0){
                   while($row = mysqli_fetch_array($result) ){        
                ?>
-                    <a href='noidungmon.php?id_mh=<?php echo $row['id_mh']?>'><img src="hinhanh/<?php echo $row['image_mh']?>"/></a> 
+                    <a href='chitietmon.php?id_ndm=<?php echo $row['id_ndm']?>'><img src="hinhanh/<?php echo $row['image_ndm']?>"/></a> 
                     <?php 
                   }
                 }
-               ?>
+               ?>   
             </div>
                
         </div>
@@ -52,35 +53,15 @@
                       <li>
                         <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Hóa học THPT Lê Duẩn</a>
                       </li>
-                      <li>
-                        <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Toán trường THPT Vĩnh Yên</a>
-                        </li>
-                      <li>
-                       <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Toán trường THPT Vĩnh Yên</a>
-                      </li>
+                     
                     </ul>
               </div>
              
 
     </div>
-
-    <div id="footer">
-        <div id="ontt">
-            <img src="hinhanh/ontt.png" alt="ôn trực tuyến" style="margin:30px 10px 0 25px "/>
-        </div>
-        <div class="fLeft">
-            <p>Cơ quan chủ quản: Công ty Cổ phần Vinsofts</p>
-            <p>Địa chỉ: 175 Tây Sơn,Đống Đa, Hà Nội<br />
-            Điện thoại: 0355370909</p>
-            <p>Email: <a href="mailto:hieunt621@wru.vn">hieunt621@wru.vn</a></p>
-            <p>
-                Bạn vui lòng đọc kỹ Chính sách bảo mật thông tin và Điều khoản sử dụng<br/>
-            Website đã được thông báo và được chấp nhận bởi Cục TMĐT và CNTT, Bộ Công Thương.
-            </p>
-            <p>Copyright (c) 2012 ABC</p>
-        </div>
-    </div>
-       
+      <?php
+        include "footer.php";
+      ?>
 </div>
     
 </body>

@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include('heade.php');
     $loi=array();
     $loi["name"]=$loi["mess"]=null;
@@ -27,17 +26,33 @@
         <div class="content">
             <div id="thuvien" style="margin:40px 10px 10px 30px ">
                 <?php
-                    require('connection.php');
-                    $id=$_GET["id"];
-                    $sql="select id_t,nd_toan, tieude_t from toan where id_t=$id";
-                    $result=mysqli_query($conn,$sql);
-                    while($data = mysqli_fetch_assoc($result)){?>
+                if(isset($_GET["id_ndm"])){
+                  $id = $_GET ["id_ndm"];} 
+                   //khai báo biến host
+                  $hostName = 'localhost';
+                  // khai báo biến username
+                  $userName = 'root';
+                  //khai báo biến password
+                  $passWord = '';
+                  // khai báo biến databaseName
+                  $databaseName = 'onthi';
+                  // khởi tạo kết nối
+                  $connect = new mysqli($hostName, $userName, $passWord, $databaseName);
+                  mysqli_set_charset($connect,'UTF8');
+                  //Kiểm tra kết nối
+                  if ($connect->connect_error) {
+                      exit('Kết nối không thành công. chi tiết lỗi:' . $connect->connect_error);
+                  }
+                mysqli_query($connect,"SET NAMES 'UTF8'");
+                $sql = "SELECT * FROM chitietmon WHERE id_ndm = $id ";
+                $result = mysqli_query($connect,$sql);  
+                 $row = mysqli_fetch_array($result);       
+                ?>
                     <?php
-                    echo"<h1><p style='color:red;'>$data[tieude_t]</p></h1>";
+                    echo"<h1><p style='color:red;'>$row[tieude_ctm]</p></h1>";
                     echo"<br/> <br/>";
-                    echo"$data[nd_toan]";
-                    } 
-                ?> 
+                    echo"$row[noidung_ctm]";                  
+                    ?> 
                 <br/>
                 <br/>
             </div>
@@ -90,25 +105,6 @@
              
 
     </div>
-
-    <div id="footer">
-        <div id="ontt">
-            <img src="hinhanh/ontt.png" alt="ôn trực tuyến" style="margin:30px 10px 0 25px "/>
-        </div>
-        <div class="fLeft">
-            <p>Cơ quan chủ quản: Công ty Cổ phần Vinsofts</p>
-            <p>Địa chỉ: 175 Tây Sơn,Đống Đa, Hà Nội<br />
-            Điện thoại: 0355370909</p>
-            <p>Email: <a href="mailto:hieunt621@wru.vn">hieunt621@wru.vn</a></p>
-            <p>
-                Bạn vui lòng đọc kỹ Chính sách bảo mật thông tin và Điều khoản sử dụng<br/>
-            Website đã được thông báo và được chấp nhận bởi Cục TMĐT và CNTT, Bộ Công Thương.
-            </p>
-            <p>Copyright (c) 2012 ABC</p>
-        </div>
-    </div>
-       
-</div>
-    
+    <?php include "footer.php"; ?>  
 </body>
 </html>

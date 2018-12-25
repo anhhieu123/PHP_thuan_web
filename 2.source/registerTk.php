@@ -6,12 +6,14 @@
     <h2>Đăng Ký Tài Khoản</h2>
         <?php
             require_once("connection.php");
+            include("checkmail.php");
             if (isset($_POST["register"])) {
                 //lấy thông tin từ các form bằng phương thức POST
                 $username = $_POST["username"];
                 $password_1 = $_POST["password_1"];
                 $password_2 = $_POST["password_2"];
                 $email = $_POST["email"];
+                $verify=md5(rand(0,1000));
                     //Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
                 if($password_1!=$password_2){
                     echo("Mật khẩu không trùng nhau! ");
@@ -29,10 +31,11 @@
                         }else{
                             $password=md5($password_1);
                             //thực hiện việc lưu trữ dữ liệu vào db
-                            $sql="INSERT INTO users(username, email, password,lever) VAlUES('$username', '$email', '$password','1')";
+                            $sql="INSERT INTO users(username, email, password,lever,verify,trangthai) VAlUES('$username', '$email', '$password','1','$verify','0')";
                             // thực thi câu $sql với biến conn lấy từ file connection.php
                             mysqli_query($conn,$sql);
-                            echo "Chúc mừng bạn đã đăng ký thành công,<a href='loginTk.php'>(login)</a> để tiếp tục!";
+                            echo "Chúc mừng bạn đã đăng ký thành công,vui lòng vào mail để xác nhận!";
+                            sendmail($username,$email,$verify);
                         }
                 }
             }
