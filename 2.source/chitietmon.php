@@ -5,13 +5,13 @@
     $name=$mess=null;
     if(isset($_POST["ok"])){
         if(empty($_POST["txtname"])){
-            $loi["name"]="* vui lòng nhập tên<br/>";
+            $loi["name"]="* vui lòng nhập tên";
         }else{
             $name=$_POST["txtname"];
         }
 
         if(empty($_POST["txtmess"])){
-            $loi["mess"]="* vui lòng nhập mess<br/>";
+            $loi["mess"]="* vui lòng nhập mess";
         }else{
             $mess=$_POST["txtmess"];
         }
@@ -58,7 +58,7 @@
             </div>
             <fieldset>
                 <legend>Comment</legend>           
-                    <form action="cttoan.php" method="post">
+                    <form action="chitietmon.php?id_ndm=<?php echo $id;?>" method="post">
                         <table>
                             <tr>
                                 <td>Name</td>
@@ -74,6 +74,25 @@
                             </tr>
                         </table>
                      </form>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Old comment</legend>
+                    <ul>
+                        <li style="clear-left; padding-top:15px; "> <img src="hinhanh/cmt.png" alt="" style="float:left;">
+                            <div style="float:left; margin-left:3px">
+                                <b> aaaa </b> <small> 10/10/11<a href="">Reply</a></small>
+                                <p>ten</p>
+                            </div>
+                        </li>
+                        <li style="clear-left; padding-top:15px; "> <img src="hinhanh/cmt.png" alt="" style="float:left;">
+                            <div style="float:left; margin-left:3px">
+                                <b> aaaa </b> <small> 10/10/11<a href="">Reply</a></small>
+                                <p>ten</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
                 </fieldset>
             <a href="ndtoan.php" ><p style='color:red;text-alig:center;'>>>Quay lại<<</p> </a> 
         </div>

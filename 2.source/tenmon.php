@@ -22,7 +22,7 @@
                       exit('Kết nối không thành công. chi tiết lỗi:' . $connect->connect_error);
                   }
                 mysqli_query($connect,"SET NAMES 'UTF8'");
-                $sql = "SELECT * FROM monhoc ";
+                $sql = "SELECT * FROM monhoc limit 0,9 ";
                 $result = mysqli_query($connect,$sql);  
                 if(mysqli_num_rows($result)>0){
                   while($row = mysqli_fetch_array($result) ){        

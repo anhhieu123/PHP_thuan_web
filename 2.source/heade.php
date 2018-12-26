@@ -22,7 +22,7 @@
 
         <div id="top-right">
                 <ul>
-                    <li> <a href="#"><img src="hinhanh/dangnhap.png" alt="Dang nhap" /></a></li>
+                    <li> <a href="index.php"><img src="hinhanh/dangnhap.png" alt="Dang nhap" /></a></li>
                     <?php 
                     session_start();
                     if(isset($_SESSION['username'])){
@@ -57,15 +57,15 @@
             <li style="border-left:1px dotted #000000"><a href="index.php">Trang chủ</a></li>
             <li><a href="#" >Chương trình học</a>
                 <ul id="submenu">
-                        <li><a href="#" >Toán Học</a></li>
-                        <li><a href="#" >Vật Lý</a></li>
-                        <li><a href="#" >Hóa Học</a></li>
-                        <li><a href="#" >Tiếng Anh</a></li>
-                        <li><a href="#" >Văn Học</a></li>
+                        <li><a href="noidungmon.php?id_mh=1" >Toán Học</a></li>
+                        <li><a href="noidungmon.php?id_mh=2" >Vật Lý</a></li>
+                        <li><a href="noidungmon.php?id_mh=3" >Hóa Học</a></li>
+                        <li><a href="noidungmon.php?id_mh=6" >Tiếng Anh</a></li>
+                        <li><a href="noidungmon.php?id_mh=5" >Văn Học</a></li>
                 </ul>
             </li>
-            <li><a href="#" >Đề Trắc Nghiệm</a></li>
-            <li><a href="#" >Mẹo học hay</a></li>
+            <li><a href="dethi.php" >Đề Trắc Nghiệm</a></li>
+            <li><a href="noidungmon.php?id_mh=15" >Mẹo học hay</a></li>
             <li><a href="#" >Tin giáo dục</a></li>
             <li><a href="#" >Forum</a></li>
             <li><a href="#" >Trợ giúp</a></li>
