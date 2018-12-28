@@ -17,7 +17,8 @@
         }
     }
     </script>
-    <title>Document</title>
+    <script src="../ckeditor/ckeditor/ckeditor.js"></script>
+    <title>Quản lý trang</title>
 </head>
 <body>
     <div id="top">
@@ -26,7 +27,7 @@
     <div id="menu">
         <ul id="submenu">
             <li><a href="list_user.php" >Quản lý thành viên</a></li>
-            <li><a href="list_category.php" >Quản lý chuyên mục</a></li>
+            <li><a href="list_category.php" >Quản lý đề thi</a></li>
             <li><a href="list_ND.php" >Quản lý bài viết</a></li>
             <li><a href="list_comment.php" >Quản lý bình luận</a></li>
             

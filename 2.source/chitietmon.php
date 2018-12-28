@@ -96,34 +96,8 @@
                 </fieldset>
             <a href="ndtoan.php" ><p style='color:red;text-alig:center;'>>>Quay lại<<</p> </a> 
         </div>
+        <?php include "sibar.php"; ?>  
 
-        <div class="sidebar">
-            <div id="logo_tintuc"> <img src="hinhanh/tintuc.png" width="300" height="54" alt="Tin Tức nổi bật"></div>
-            <div id="Tintuc">
-                    <ul>
-                      <li>
-                        <a href="#" >>>Chuyên đề và bài tập Hóa vô cơ 11 Chương 3 Nhóm Cacbon, Silic có đáp án</a>
-                      </li>
-                      <li>
-                        <a href="#" >>>Cuộc thi “Khoảnh Khắc Cô Thầy” - Tri ân thầy cô cùng Baitap123</a> 
-                      </li>
-                      <li>
-                          <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Toán trường THPT Ngô Sỹ Liên</a> 
-                      </li>
-                      <li>
-                        <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Hóa học THPT Lê Duẩn</a>
-                      </li>
-                      <li>
-                        <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Toán trường THPT Vĩnh Yên</a>
-                        </li>
-                      <li>
-                       <a href="#">>>Đề thi thử THPT Quốc gia lần 1 môn Toán trường THPT Vĩnh Yên</a>
-                      </li>
-                    </ul>
-              </div>
-             
-
-    </div>
     <?php include "footer.php"; ?>  
 </body>
 </html>

@@ -28,7 +28,7 @@
                        {
                            echo"<td>Admin</td>";
                        }
-                        echo"<td><a href='del.php?id=$data[id]'onclick='return show_confirm()' style='color:#f3f'>Delete</a></td>";
+                        echo"<td><a href='del.php?id=$data[id]' onclick='return show_confirm()' style='color:#f3f'>Delete</a></td>";
                     echo"</tr>";
                     $stt++;
                 }

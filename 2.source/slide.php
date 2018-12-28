@@ -3,6 +3,9 @@
             <div class="flexslider">
                 <ul class="slides">
                     <li>
+                        <img src="hinhanh/hpny.jpg" />
+                    </li>
+                    <li>
                         <img src="hinhanh/banner-top1.png" />
                     </li>
                     <li>

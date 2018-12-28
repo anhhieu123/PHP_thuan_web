@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$con=mysqli_connect('localhost','root','','login');
+	$con=mysqli_connect('localhost','root','','onthi');
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
@@ -11,7 +11,7 @@
 		$sql="select * from users where email='$email' and verify='$verify'";
 		$verifySelect= mysqli_query($con, $sql);
 		if (mysqli_num_rows($verifySelect)) {
-			$sqlUpdate="update users set trangthai =1 where email='$email' and verify='$verify' and trangthai=0";
+			$sqlUpdate="update users set trangthai=1 where email='$email' and verify='$verify' and trangthai=0";
 			if(mysqli_query($con, $sqlUpdate)){
 				echo "Tài khoản đã được kích hoạt thành công";
 			}else

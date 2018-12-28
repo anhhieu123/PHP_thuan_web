@@ -1,5 +1,6 @@
 <?php
-     include('heade.php');
+    ob_start(); 
+     include_once('heade.php');
      include('slide.php');
 ?>
     <div class="dangnhap">
@@ -30,14 +31,14 @@
                 if (mysqli_num_rows($query)==1) {
                     $data=mysqli_fetch_assoc($query);
                     if($data['trangthai']==1){
-                        $_SESSION['lever']=$data ["lever"];
+                        $_SESSION['lever']=$data ['lever'];
                         if($_SESSION['lever']==2){
-                            header("location:admin/admin.php");
-                            exit();
+                            header('location:admin/admin.php');
+                            
                         }else{
                             $_SESSION["username"]=$username;
                             header("location:index.php");
-                            exit();
+                            
                         }
                     }else{
                         $loi["login"]="* Tài khoản của bạn chưa kích hoạt, vui lòng kiểm tra email";
@@ -76,4 +77,5 @@
     </div>
  <?php
         include('footer.php');
+        ob_end_flush(); 
     ?>   

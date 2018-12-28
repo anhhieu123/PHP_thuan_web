@@ -20,7 +20,7 @@
                  <ul>
                  <?php
                           require('connection.php');
-                          $sql="select id_tt,ten_tt from tintuc";
+                          $sql="select id_tt,ten_tt from tintuc order by luotxem desc ";
                           $result=mysqli_query($conn,$sql);
                           while($data = mysqli_fetch_assoc($result)){?>
                           <?php

@@ -2,39 +2,49 @@
 require("hea.php");
 $id=$_GET["id"];
 $loi=array();
-$loi['catename']=null; 
-$catename=null;
+$loi['catename']=$catend['catend']=null; 
+$catename=$catend=null;
+require('../connection.php');
+$sql="select ten_tt,noidung_tt from tintuc where id_tt=$id";
+$result=mysqli_query($conn,$sql);
+$data=mysqli_fetch_assoc($result);
 if(isset($_POST['ok']))
     {
         if(empty($_POST["txtname"])){
-            $loi["catename"]="*Vui lòng nhập tên môn";
+            $loi["catename"]="*Vui lòng nhập tiêu đề<br/>";
         }else
         {
             $catename=$_POST["txtname"];
         }
-        if($catename)
+        if(empty($_POST["txtnd"])){
+            $loi["catend"]="*Vui lòng nhập nội dung";
+        }else
+        {
+            $catend=$_POST["txtnd"];
+        }
+        if($catename && $catend)
         {
             require('../connection.php');
-            $sql="update onthidaihoc set tenmon='$catename'where id_cm=$id";
+            $sql="update tintuc set ten_tt='$catename', noidung_tt='$catend' where id_tt=$id";
             mysqli_query($conn,$sql);
             mysqli_close($conn);
             header("location:list_ND.php");
             exit();
         }
     }
-require('../connection.php');
-$sql="select temmon,noidung from onthidaihoc where id_cm=$id";
-$result=mysqli_query($conn,$sql);
-$data=mysqli_fetch_assoc($result);
 ?>
     <div id="wapper2">
-        <fieldset style="width:27px; margin=20px auto 10px;">
+        <fieldset style="width:30px; margin=20px auto 10px;">
             <legend>Chỉnh sửa Nội dung</legend>
-            <form acction="edit_ND.php?id=<?php echo$id ;?>" method="post">
+            <form acction="edit_ND.php?id=<?php echo $id ;?>" method="post">
                 <table>
                     <tr>
-                        <td>Name</td>
-                        <td><input type="text" size="25px" value="<?php echo $data['tenmon'];?>" name="txtname"/></td>
+                        <td style="width:100px;">Tiêu đề</td>
+                        <td><textarea cols="105" rows="2" name="txtnd"><?php echo $data['ten_tt'];?></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="width:100px;">Nội dung</td>
+                        <td><textarea cols="105" rows="5" name="txtnd"><?php echo $data['noidung_tt'];?></textarea></td>
                     </tr>
                     <tr>
                         <td></td>
