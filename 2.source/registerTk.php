@@ -21,25 +21,31 @@
                     if ($username == "" || $password_1 == "" ||$password_2 == ""|| $email == "") {
                         echo "Bạn vui lòng nhập đầy đủ thông tin! ";
                     }else{
-                        // Kiểm tra tài khoản đã tồn tại chưa
-                        $sql="select * from users where username='$username'";
-                        $kt=mysqli_query($conn, $sql);
+                        $partten = "/^[A-Za-z0-9_\.]{6,32}@([a-zA-Z0-9]{2,12})(\.[a-zA-Z]{2,12})+$/";
+                        $subject = "$email";
+                        if(!preg_match($partten ,$subject, $matchs)){
+                             echo  "Mail bạn vừa nhập không đúng định dạng ";}
+                        else{                       
+                            // Kiểm tra tài khoản đã tồn tại chưa
+                            $sql="select * from users where username='$username'";
+                            $kt=mysqli_query($conn, $sql);
 
-                        if(mysqli_num_rows($kt)  > 0){
-                            echo '<script language="javascript">alert("Tài khoản đã tồn tại"); window.location="registerTk.php";</script>';
-                            die();
-                        }else{
-                            $password=md5($password_1);
-                            //thực hiện việc lưu trữ dữ liệu vào db
-                            $sql="INSERT INTO users(username, email, password,lever,verify,trangthai) VAlUES('$username', '$email', '$password','1','$verify','0')";
-                            // thực thi câu $sql với biến conn lấy từ file connection.php
-                            mysqli_query($conn,$sql);
-                            echo "Chúc mừng bạn đã đăng ký thành công,vui lòng vào mail để xác nhận!";
-                            sendmail($username,$email,$verify);
+                            if(mysqli_num_rows($kt)  > 0){
+                                echo '<script language="javascript">alert("Tài khoản đã tồn tại"); window.location="registerTk.php";</script>';
+                                die();
+                            }else{
+                                $password=md5($password_1);
+                                //thực hiện việc lưu trữ dữ liệu vào db
+                                $sql="INSERT INTO users(username, email, password,lever,verify,trangthai) VAlUES('$username', '$email', '$password','1','$verify','0')";
+                                // thực thi câu $sql với biến conn lấy từ file connection.php
+                                mysqli_query($conn,$sql);
+                                echo "Chúc mừng bạn đã đăng ký thành công,vui lòng vào mail để xác nhận!";
+                                sendmail($username,$email,$verify);
+                            }
                         }
+                     }
                 }
-            }
-        }
+             }
         ?>
         <form method="Post" action="registerTk.php">
             <div class="input-group">
