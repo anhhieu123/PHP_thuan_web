@@ -49,7 +49,7 @@
                  $row = mysqli_fetch_array($result);       
                 ?>
                     <?php
-                    echo"<h1><p style='color:red;'>$row[tieude_ctm]</p></h1>";
+                    echo"<h1><p style='color:#00cc66;'>$row[tieude_ctm]</p></h1>";
                     echo"<br/> <br/>";
                     echo"$row[noidung_ctm]";                  
                     ?> 
@@ -94,7 +94,7 @@
                         
                     </ul>
                 </fieldset>
-            <a href="ndtoan.php" ><p style='color:red;text-alig:center;'>>>Quay lại<<</p> </a> 
+            <a href="ndtoan.php" ><p style='color:#00cc66;text-alig:center;'>>>Quay lại<<</p> </a> 
         </div>
         <?php include "sibar.php"; ?>  
 
