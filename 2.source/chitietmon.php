@@ -56,46 +56,7 @@
                 <br/>
                 <br/>
             </div>
-            <fieldset>
-                <legend>Comment</legend>           
-                    <form action="chitietmon.php?id_ndm=<?php echo $id;?>" method="post">
-                        <table>
-                            <tr>
-                                <td>Name</td>
-                                <td><input type="text" size="25" name="txtname"/></td>
-                            </tr>
-                            <tr>
-                                <td>Mess</td>
-                                <td><textarea cols="60" rows="5" name="txtmess"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><input type="submit" value="Submit" name="ok"/></td>
-                            </tr>
-                        </table>
-                     </form>
-                </fieldset>
-
-                <fieldset>
-                    <legend> Old comment</legend>
-                    <ul>
-                        <li style="clear-left; padding-top:15px; "> <img src="hinhanh/cmt.png" alt="" style="float:left;">
-                            <div style="float:left; margin-left:3px">
-                                <b> aaaa </b> <small> 10/10/11<a href="">Reply</a></small>
-                                <p>ten</p>
-                            </div>
-                        </li>
-                        <li style="clear-left; padding-top:15px; "> <img src="hinhanh/cmt.png" alt="" style="float:left;">
-                            <div style="float:left; margin-left:3px">
-                                <b> aaaa </b> <small> 10/10/11<a href="">Reply</a></small>
-                                <p>ten</p>
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </fieldset>
-            <a href="ndtoan.php" ><p style='color:#00cc66;text-alig:center;'>>>Quay lại<<</p> </a> 
-        </div>
+            </div>
         <?php include "sibar.php"; ?>  
 
     <?php include "footer.php"; ?>  

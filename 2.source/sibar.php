@@ -28,8 +28,7 @@
                          echo"<a href='tintuc_nd.php?id=$data[id_tt]' >>$data[ten_tt]</a>";
                           echo"</li>";
                           };
-                          ?>
-                     
+                          ?>                    
                  </ul>
                </div>
         </div>
