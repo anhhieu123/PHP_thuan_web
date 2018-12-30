@@ -97,7 +97,7 @@ $id=$_GET["id"];
             </div>
             <fieldset>
                 <legend>Comment</legend>           
-                    <form>
+                   
                         <table>
                             <tr>
                                 <td>Name</td>
@@ -109,10 +109,10 @@ $id=$_GET["id"];
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><input type="submit" value="Submit" class="com-submit" data-newid=<?php echo $id; ?>/></td>
+                                <td><input type="submit" value="Submit" class="com-submit" data-newid="<?php echo $id; ?>"/></td>
                             </tr>
                         </table>
-                     </form>
+                
                 </fieldset>
                 <style>
                 li div {
@@ -167,7 +167,6 @@ $id=$_GET["id"];
                                 </ul>
                                 <fieldset style="width:150px; margin-left:30px;">
                                     <legend>Reply  </legend>
-                                        <form>
                                             <table>
                                                 <tr>
                                                     <td> ReplyName</td>
@@ -181,8 +180,7 @@ $id=$_GET["id"];
                                                     <td></td>
                                                     <td><input type="submit" value="Submit" name="ok"/></td>
                                                 </tr>
-                                            </table>
-                                        </form>                             
+                                            </table>                           
                                 </fieldset>
                         </li>
                         <li style=" padding-top:15px; ">

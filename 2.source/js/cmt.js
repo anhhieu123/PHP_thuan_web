@@ -9,7 +9,7 @@ $(document).ready(function () {
             data:"mess="+m+"&name="+n+"&id="+id,
             async:true,
             success:function(kq){
-                $("ul li:eg(0)").before(kq);
+                $("#rep li:eg(0)").before(kq);
             }
         })
         return false;

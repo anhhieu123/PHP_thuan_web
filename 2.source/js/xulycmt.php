@@ -11,7 +11,7 @@
     mysqli_query($conn,"SET NAMES 'UTF8'");
 
     $sql="insert into comment (name, message, time, id_tt) 
-        values('$com_name','$com_mess',now(),'$id_tt'";
+        values('$com_name','$com_mess',now(),'$id_tt')";
     $result=mysqli_query($conn,$sql);
     echo $com_name;
     echo $com_mess;
