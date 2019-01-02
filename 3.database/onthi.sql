@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2018 at 03:45 PM
+-- Generation Time: Jan 02, 2019 at 10:07 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `cauhoi1` (
   `id1` int(10) NOT NULL,
   `cauhoide1` text CHARACTER SET utf8mb4 COLLATE utf8mb4_turkish_ci NOT NULL,
-  `made1` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `id_mh` int(11) NOT NULL,
   `dapan1` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,105 +39,168 @@ CREATE TABLE `cauhoi1` (
 -- Dumping data for table `cauhoi1`
 --
 
-INSERT INTO `cauhoi1` (`id1`, `cauhoide1`, `made1`, `dapan1`) VALUES
-(1, 'Có bao nhiêu cách chọn 2 học sinh từ 1 nhóm gồm 34 học sinh?', '1', 'd'),
-(2, 'Trong không gian Oxyz ,mặt phằng (P): x+2y+3z-5=0 có một vecto pháp tuyến là:', '1', 'd'),
-(3, 'Cho hàm số y=ax^3+bx^2+cx+d(a,b,c,d thuộc R). Số cực trị của hàm số đã cho là:', '1', 'a'),
-(4, 'Gọi S là diện tích của hình phẳng giới hạn bởi các đường y=e^x,y=0,x=0,x=2. Mệnh đề nào sau đây đúng?', '1', 'b'),
-(5, 'với a là số thực dương tùy ý,ln(5a)-ln(3a) bằng', '1', 'c'),
-(6, 'Nguyên hàm của số f(x)=x^3+x là:', '1', 'd'),
-(7, 'Trong không gian đường thẳng d: x=2-t, y=1+2t, z=3+t có một vecto chỉ phương là:', '1', 'b'),
-(8, 'Số phức -3+7i có phần ảo là?', '1', 'd'),
-(9, 'Diện tích của mặt cầu bán kính R bằng', '1', 'c'),
-(10, 'Trong không gian cho hai điểm và Trung điểm của đoạn Õyz, A(2; − 4; 3) B(2; 2; 7) . thẳng có tọa độ là', '1', 'd'),
-(11, 'Phuong trình 2^(2x+1)=32 có nghiệm là\"', '', 'b'),
-(12, ' Cho khối chóp có đáy là hình vuông cạnh và chiều cao bằng Thể tích của khối chóp đã a 2a.cho bằng', '', 'b'),
-(13, 'Một người gửi tiết kiệm vào một ngân hàng với lãi suất /năm. Biết rằng nếu không rút 7,5%\r\ntiền ra khỏi ngân hàng thì cứ sau mỗi năm số tiền lãi sẽ được nhập vào vốn để tính lãi cho năm tiếp\r\ntheo. Hỏi sau ít nhất bao nhiêu năm người đó thu được (cả số tiền gửi ban đầu và lãi) gấp đôi số tiền\r\ngửi ban đầu, giả định trong khoảng thời gian này lãi suất không thay đổi và người đó không rút tiền ra ?', '', 'c'),
-(14, 'Cho hình chóp có đáy là hình vuông cạnh vuông góc với mặt phẳng đáy và S.ABCD a, SA\r\nSB=2a . Góc giữa đường thẳng và mặt phẳng đáy bằng', '', 'a'),
-(15, ' Trong không gian mặt phẳng đi qua điểm và song song với mặt phẳng Oxyz, A(2; − 1; 2)\r\n(P):2x − y + 3z + 2 = 0 có phương trình là', '', 'a'),
-(16, 'Trong không gian mặt phẳng đi qua điểm và song song với mặt phẳng Oxyz, A(2; − 1; 2)\r\n(P):2x − y + 3z + 2 = 0 có phương trình là', '', 'd'),
-(17, 'Từ một hộp chứa quả cầu màu đỏ và quả cầu màu xanh, lấy ngẫu nhiên đồng thời 3 quả 11 4\r\ncầu. Xác suất để lấy được 3 quả cầu màu xanh bằng', '', 'a'),
-(18, ' Giá trị lớn nhất của hàm số y=x^4-4x^2+9 trên đoạn [-2;3] bằng', '', 'd'),
-(19, ' Tìm hai số thực x và y thỏa mãn (2x-3yi)+(1-3i)=x+6i với i là đơn vị ảo', '', 'a'),
-(20, 'Một chiếc bút chì có dạng khối lăng trụ lục giác đều có cạnh đáy và chiều cao bằng 3 mm\r\n200 mm. Thân bút chì được làm bằng gỗ và phần lõi được làm bằng than chì. Phần lõi có dạng khối trụ\r\ncó chiều cao bằng chiều dài của bút và đáy là hình tròn có bán kính Giả định gỗ có giá 1 mm. 1 m\r\na\r\n(triệu đồng), than chì có giá (triệu đồng). Khi đó giá nguyên vật liệu làm một chiếc bút chì như 1 mà\r\n8a\r\ntrên gần nhất với kết quả nào dưới đây ?', '', 'd');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cauhoi2`
---
-
-CREATE TABLE `cauhoi2` (
-  `id2` int(10) NOT NULL,
-  `cauhoi2` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `made2` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `dapan2` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `cauhoi2`
---
-
-INSERT INTO `cauhoi2` (`id2`, `cauhoi2`, `made2`, `dapan2`) VALUES
-(1, 'Thủy phân không hoàn toàn tetra peptit X ngoài các α - amino axit còn thu được các đi peptit: Gly-Ala; Phe-Val; Ala-Phe. Cấu tạo đúng của X là', '', 'c'),
-(2, 'Khi trùng ngưng 13,1g axit α-aminocaproic với hiệu suất 80%, ngoài aminoaxit còn dư ta còn thu được m gam polime và 1,44 gam nước. m có giá trị là', '', 'b'),
-(3, 'Glucozơ lên men thành ancol etylic, toàn bộ khí sinh ra được dẫn vào dung dịch Ca(OH)2 dư tách ra 40 gam kết tủa, biết hiệu suất lên men đạt 75%. Khối lượng glucozơ cần dùng là', '', 'd'),
-(4, ' Cho 6 gam một este của axit cacboxylic no đơn chức và ancol no đơn chức phản ứng vừa hết với 100 ml dung dịch NaOH 1M. Tên gọi của este đó là', '', 'a'),
-(5, 'Để chứng minh glucozơ có nhóm chức anđêhit, có thể dùng một trong ba phản ứng hóa học. Trong các phản ứng sau, phản ứng nào không chứng minh được nhóm chức anđehit của glucozơ?', '', 'd'),
-(6, 'Thủy phân este E có công thức phân tử C4H8O2 (có mặt H2SO4 loãng) thu được 2 sản phẩm hữu cơ X và Y. Từ X có thể điều chế trực tiếp ra Y bằng một phản ứng duy nhất. Tên gọi của E là', '', 'a'),
-(7, 'Fe bị ăn mòn điện hoá khi tiếp xúc với kim loại M để ngoài không khí ẩm. Vậy M là', '', 'b'),
-(8, 'Số đồng phân este ứng với công thức phân tử C3H6O2 là', '', 'c'),
-(9, 'Ngâm 1 lá Zn trong 50 ml dung dịch AgNO3 0,2M. Giả sử kim loại tạo ra bám hết vào lá Zn. Sau khi phản ứng xảy ra xong lấy lá Zn ra sấy khô, đem cân, thấy:', '', 'b'),
-(10, 'Khi thuỷ phân chất béo trong môi trường kiềm thì thu được muối của axit béo và', '', 'a'),
-(11, 'Kim loại Zn có thể khử được ion nào sau đây?', '', 'b'),
-(12, 'Đun nóng este CH3COOC2H5 với một lượng vừa đủ dung dịch NaOH, sản phẩm thu được là', '', 'd'),
-(13, 'Đốt cháy hoàn toàn một este X thu được nCO2 = nH2O. Este đó là', '', 'a'),
-(14, ' Hợp chất nào sau đây là đi peptit?', '', 'b'),
-(15, 'Cho glixerol phản ứng với hỗn hợp axit béo gồm C17H35COOH và C15H31COOH, số loại trieste tối đa được tạo ra là', '', 'c'),
-(16, 'Chọn câu đúng: \"Glucozơ và fructozơ...', '', 'd'),
-(17, 'Xà phòng hoá hoàn toàn 17,24 gam chất béo cần vừa đủ 0,06 mol NaOH. Cô cạn dung dịch sau phản ứng thu được khối lượng xà phòng là', '', 'a'),
-(18, 'Monome dùng để điều chế thuỷ tinh hữu cơ (plexiglas) là', '', 'c'),
-(19, 'Khi đốt cháy hoàn toàn một hợp chất hữu cơ thu được hỗn hợp khí CO2 và hơi H2O có tỉ lệ mol là 1:1. Chất này có thể lên men rượu. Chất đó là', '', 'd'),
-(20, 'Nhận định sai là', '', 'd');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cauhoi3`
---
-
-CREATE TABLE `cauhoi3` (
-  `id3` int(10) NOT NULL,
-  `cauhoide3` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `made3` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `dapan3` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `cauhoi3`
---
-
-INSERT INTO `cauhoi3` (`id3`, `cauhoide3`, `made3`, `dapan3`) VALUES
-(1, ' Một sóng cơ hình sin truyền theo trục Ox với chu kì T. Khoảng thời gian để sóng truyền được\r\nquãng đường bằng một bước sóng là', '', 'c'),
-(2, 'Theo thứ tự tăng dần về tần số của các sóng vô tuyến, sắp xếp nào sau đây đúng?', '', 'a'),
-(3, ' Cho bốn ánh sáng đơn sắc: đỏ, tím, cam và lục. Chiết suất của thủy tinh có giá trị lớn nhất đối\r\nvới ánh sáng', '', 'd'),
-(4, ' Gọi c là tốc độ ánh sáng trong chân không. Theo thuyết tương đối, một hạt có khối lượng động\r\n(khối lượng tương đối tính) là m thì nó có năng lượng toàn phần là', '', 'b'),
-(5, ' Khi nói về tia laze, phát biểu nào sau đây ?', '', 'a'),
-(6, 'Trong quá trình truyền tải điện năng đi xa, để giảm công suất hao phí trên đường dây truyền tải\r\nthì người ta thường sử dụng biện pháp nào sau đây?', '', 'b'),
-(7, 'Trong một điện trường đều có cường độ , khi một điện tích dương di chuyển cùng chiều E q\r\nđường sức điện một đoạn thì công của lực điện là', '', 'b'),
-(8, 'Khi nói về dao động cơ cưỡng bức, phát biểu nào sau đây ?', '', 'c'),
-(9, ': Một dây dẫn thẳng dài đặt trong không khí có dòng điện với cường độ chạy qua. Độ lớn cảm I\r\nứng từ do dòng điện này gây ra tại một điểm cách dây một đoạn được tính bởi công thức:', '', 'c'),
-(10, ' Trong thí nghiệm giao thoa sóng ở mặt nước, hai nguồn kết hợp đặt tại hai điểm A và B dao\r\nđộng cùng pha theo phương thẳng đứng. Trên đoạn thẳng AB, khoảng cách giữa hai cực tiểu giao thoa\r\nliên tiếp là 0,5 cm. Sóng truyền trên mặt nước có bước sóng là', '', 'a'),
-(11, 'Một vòng dây dẫn kín, phẳng được đặt trong từ trường đều. Trong khoảng thời gian 0,04 s, từ\r\nthông qua vòng dây giảm đều từ giá trị 6.10 Wb về 0 thì suất điện động cảm ứng xuất hiện trong −3\r\nvòng dây có độ lớn là', '', 'b'),
-(12, ' Một con lắc lò xo có k = 40 N/m và m = 100 g. Dao động riêng của con lắc này có tần số góc là', '', 'c'),
-(13, ' Giới hạn quang điện của một kim loại là 300 nm. Lấy h = 6,625.10 J.s; c = 3.10 m/s. Công −34 8\r\nthoát êlectron của kim loại này là', '', 'a'),
-(14, ' Trong thí nghiệm Y-âng về giao thoa ánh sáng, nguồn sáng phát ra ánh sáng đơn sắc. Khoảng\r\ncách giữa hai khe là 1 mm, khoảng cách từ mặt phẳng chứa hai khe đến màn quan sát là 1,2 m. Trên\r\nmàn, khoảng vân đo được là 0,6 mm. Bước sóng của ánh sáng trong thí nghiệm bằng', '', 'd'),
-(15, 'Đặt vào hai đầu điện trở một điện áp xoay chiều có giá trị hiệu dụng không đổi và tần số f thay\r\nđổi được. Khi f = f và f = 2f thì công suất tiêu thụ của điện trở tương ứng là P và P . Hệ thức nào', '', 'c'),
-(16, ' Một thấu kính hội tụ có tiêu cự 30 cm. Vật sáng AB đặt vuông góc với trục chính của thấu\r\nkính. Ảnh của vật tạo bởi thấu kính ngược chiều với vật và cao gấp ba lần vật. Vật AB cách thấu kính', '', 'd'),
-(17, ' Một sợi dây đàn hồi dài 30 cm có hai đầu cố định. Trên dây đang có sóng dừng. Biết sóng\r\ntruyền trên dây với bước sóng 20 cm và biên độ dao động của điểm bụng là 2 cm. Số điểm trên dây mà\r\nphần tử tại đó dao động với biên độ 6 mm là', '', 'b'),
-(18, ' Một ống Cu-lít-giơ (ống tia X) đang hoạt động. Bỏ qua động năng ban đầu của các êlectron\r\nkhi bứt ra khỏi catôt. Ban đầu, hiệu điện thế giữa anôt và catôt là U thì tốc độ của êlectron khi đập vào\r\nanôt là v. Khi hiệu điện thế giữa anôt và catôt là 1,5U thì tốc độ của êlectron đập vào anôt thay đổi ', '', 'a'),
-(19, 'Trong không khí, ba điện tích điểm q , q , q lần lượt được đặt tại ba điểm A, B, C nằm trên 1 2 3\r\ncùng một đường thẳng. Biết AC = 60 cm, q = 4q , lực điện do q và q tác dụng lên q cân bằng nhau. 1 3 1 3 2\r\nB cách A và C lần lượt là', '', 'd'),
-(20, ' Đặt điện áp xoay chiều u vào hai đầu đoạn mạch có R, L, C mắc\r\nnối tiếp thì dòng điện trong đoạn mạch có cường độ i. Hình bên là một\r\nphần đồ thị biểu diễn sự phụ thuộc của tích u.i theo thời gian t. Hệ số công\r\nsuất của đoạn mạch là', '', 'a');
+INSERT INTO `cauhoi1` (`id1`, `cauhoide1`, `id_mh`, `dapan1`) VALUES
+(1, 'Có bao nhiêu cách chọn 2 học sinh từ 1 nhóm gồm 34 học sinh?', 1, 'd'),
+(2, 'Trong không gian Oxyz ,mặt phằng (P): x+2y+3z-5=0 có một vecto pháp tuyến là:', 1, 'd'),
+(3, 'Cho hàm số y=ax^3+bx^2+cx+d(a,b,c,d thuộc R). Số cực trị của hàm số đã cho là:', 1, 'a'),
+(4, 'Gọi S là diện tích của hình phẳng giới hạn bởi các đường y=e^x,y=0,x=0,x=2. Mệnh đề nào sau đây đúng?', 1, 'b'),
+(5, 'với a là số thực dương tùy ý,ln(5a)-ln(3a) bằng', 1, 'c'),
+(6, 'Nguyên hàm của số f(x)=x^3+x là:', 1, 'd'),
+(7, 'Trong không gian đường thẳng d: x=2-t, y=1+2t, z=3+t có một vecto chỉ phương là:', 1, 'b'),
+(8, 'Số phức -3+7i có phần ảo là?', 1, 'd'),
+(9, 'Diện tích của mặt cầu bán kính R bằng', 1, 'c'),
+(10, 'Trong không gian cho hai điểm và Trung điểm của đoạn Õyz, A(2; − 4; 3) B(2; 2; 7) . thẳng có tọa độ là', 1, 'd'),
+(11, 'Phuong trình 2^(2x+1)=32 có nghiệm là\"', 1, 'b'),
+(12, ' Cho khối chóp có đáy là hình vuông cạnh và chiều cao bằng Thể tích của khối chóp đã a 2a.cho bằng', 1, 'b'),
+(13, 'Một người gửi tiết kiệm vào một ngân hàng với lãi suất /năm. Biết rằng nếu không rút 7,5%\r\ntiền ra khỏi ngân hàng thì cứ sau mỗi năm số tiền lãi sẽ được nhập vào vốn để tính lãi cho năm tiếp\r\ntheo. Hỏi sau ít nhất bao nhiêu năm người đó thu được (cả số tiền gửi ban đầu và lãi) gấp đôi số tiền\r\ngửi ban đầu, giả định trong khoảng thời gian này lãi suất không thay đổi và người đó không rút tiền ra ?', 1, 'c'),
+(14, 'Cho hình chóp có đáy là hình vuông cạnh vuông góc với mặt phẳng đáy và S.ABCD a, SA\r\nSB=2a . Góc giữa đường thẳng và mặt phẳng đáy bằng', 1, 'a'),
+(15, ' Trong không gian mặt phẳng đi qua điểm và song song với mặt phẳng Oxyz, A(2; − 1; 2)\r\n(P):2x − y + 3z + 2 = 0 có phương trình là', 1, 'a'),
+(16, 'Trong không gian mặt phẳng đi qua điểm và song song với mặt phẳng Oxyz, A(2; − 1; 2)\r\n(P):2x − y + 3z + 2 = 0 có phương trình là', 1, 'd'),
+(17, 'Từ một hộp chứa quả cầu màu đỏ và quả cầu màu xanh, lấy ngẫu nhiên đồng thời 3 quả 11 4\r\ncầu. Xác suất để lấy được 3 quả cầu màu xanh bằng', 1, 'a'),
+(18, ' Giá trị lớn nhất của hàm số y=x^4-4x^2+9 trên đoạn [-2;3] bằng', 1, 'd'),
+(19, ' Tìm hai số thực x và y thỏa mãn (2x-3yi)+(1-3i)=x+6i với i là đơn vị ảo', 1, 'a'),
+(20, 'Một chiếc bút chì có dạng khối lăng trụ lục giác đều có cạnh đáy và chiều cao bằng 3 mm\r\n200 mm. Thân bút chì được làm bằng gỗ và phần lõi được làm bằng than chì. Phần lõi có dạng khối trụ\r\ncó chiều cao bằng chiều dài của bút và đáy là hình tròn có bán kính Giả định gỗ có giá 1 mm. 1 m\r\na\r\n(triệu đồng), than chì có giá (triệu đồng). Khi đó giá nguyên vật liệu làm một chiếc bút chì như 1 mà\r\n8a\r\ntrên gần nhất với kết quả nào dưới đây ?', 1, 'd'),
+(21, 'Một sóng cơ hình sin truyền theo trục Ox với chu kì T. Khoảng thời gian để sóng truyền được\r\nquãng đường bằng một bước sóng là', 2, 'c'),
+(22, ' Theo thứ tự tăng dần về tần số của các sóng vô tuyến, sắp xếp nào sau đây đúng?', 2, 'd'),
+(23, 'Cho bốn ánh sáng đơn sắc: đỏ, tím, cam và lục. Chiết suất của thủy tinh có giá trị lớn nhất đối\r\nvới ánh sáng', 2, 'd'),
+(24, ' Gọi c là tốc độ ánh sáng trong chân không. Theo thuyết tương đối, một hạt có khối lượng động\r\n(khối lượng tương đối tính) là m thì nó có năng lượng toàn phần là', 2, 'b'),
+(25, 'Khi nói về tia laze, phát biểu nào sau đây sai?', 2, 'a'),
+(26, 'Trong quá trình truyền tải điện năng đi xa, để giảm công suất hao phí trên đường dây truyền tải\r\nthì người ta thường sử dụng biện pháp nào sau đây?', 2, 'b'),
+(27, 'Trong một điện trường đều có cường độ E , khi một điện tích dương q di chuyển cùng chiều\r\nđường sức điện một đoạn d thì công của lực điện là', 2, 'b'),
+(28, ' Khi nói về dao động cơ cưỡng bức, phát biểu nào sau đây sai?', 2, 'c'),
+(29, 'Một dây dẫn thẳng dài đặt trong không khí có dòng điện với cường độ I chạy qua. Độ lớn cảm \r\nứng từ B do dòng điện này gây ra tại một điểm cách dây một đoạn được tính bởi công thức:', 2, 'c'),
+(30, ' Trong thí nghiệm giao thoa sóng ở mặt nước, hai nguồn kết hợp đặt tại hai điểm A và B động cùng pha theo phương thẳng đứng. Trên đoạn thẳng AB  khoảng cách giữa hai cực tiểu giao thoa liên tiếp là 0,5 cm. Sóng truyền trên mặt nước có bước sóng là ', 2, 'a'),
+(31, ' Một vòng dây dẫn kín, phẳng được đặt trong từ trường đều. Trong khoảng thời gian 0,04 s, từ thông qua vòng dây giảm đều từ giá trị 6.10^3 Wb về 0 thì suất điện động cảm ứng xuất hiện trong vòng dây có độ lớn là', 2, 'b'),
+(32, ' Một con lắc lò xo có k = 40N/m  và m = 100 g. Dao động riêng của con lắc này có tần số góc là', 2, 'c'),
+(33, ' Trong thí nghiệm Y-âng về giao thoa ánh sáng, nguồn sáng phát ra ánh sáng đơn sắc. Khoảng cách giữa hai khe là 1 mm, khoảng cách từ mặt phẳng chứa hai khe đến màn quan sát là 1,2 m. Trên màn, khoảng vân đo được là 0,6 mm. Bước sóng của ánh sáng trong thí nghiệm bằng', 2, 'd'),
+(34, 'Một thấu kính hội tụ có tiêu cự 30 cm. Vật sáng AB  đặt vuông góc với trục chính của thấu kính. Ảnh của vật tạo bởi thấu kính ngược chiều với vật và cao gấp ba lần vật. Vật AB cách thấu kính', 2, 'd'),
+(35, ' Một sợi dây đàn hồi dài 30 cm có hai đầu cố định. Trên dây đang có sóng dừng. Biết sóng truyền trên dây với bước sóng 20 cm và biên độ dao động của điểm bụng là 2 cm. Số điểm trên dây mà phần tử tại đó dao động với biên độ 6 mm là', 2, 'b'),
+(36, ' Trong không khí, ba điện tích điểm q1,q2,q3 lần lượt đặt tại 3 điểm A ,B ,C. Nắm trên cùng 1 một đường thẳng. Biết AC=60cm q1=4q3 lức điện do q1 và q3 tác dụng lên q2 là cân bằng. B cách A và C lần lượt là', 2, 'd'),
+(37, ' Điện năng được truyền từ một nhà máy phát điện gồm 8 tổ máy đến nơi tiêu thụ bằng đường dây tải điện một pha. Giờ cao điểm cần cả 8 tổ máy hoạt động, hiệu suất truyền tải đạt 70%  Coi điện áp hiệu dụng ở nhà máy không đổi, hệ số công suất của mạch điện bằng 1, công suất phát điện của các tổ\r\nmáy khi hoạt động là không đổi và như nhau. Khi công suất tiêu thụ điện ở nơi tiêu thụ giảm còn 72,5% so với giờ cao điểm thì cần bao nhiêu tổ máy hoạt động?', 2, 'a'),
+(38, 'Đặt điện áp xoay chiều u vào hai đầu đoạn mạch có R,L,C Đặt điện áp xoay chiều u vào hai đầu đoạn mạch có', 2, 'a'),
+(39, ' Một vật nhỏ dao động điều hòa dọc theo trục Ox Khi vật cách vị trí cân bằng một đoạn 2 cm thì động năng của vật là 0,48J  Khi vật cách vị trí cân bằng một đoạn 6 cm thì động năng của vật là 0,32J. Biên độ dao động của vật bằng', 2, 'c'),
+(40, ' Một ống Cu-lít-giơ (ống tia X) đang hoạt động. Bỏ qua động năng ban đầu của các êlectron khi bứt ra khỏi catôt. Ban đầu, hiệu điện thế giữa anôt và catôt là U thì tốc độ của êlectron khi đập vào\r\nanôt là v. Khi hiệu điện thế giữa anôt và catôt là 1,5U thì tốc độ của êlectron đập vào anôt thay đổi một\r\nlượng 4000 km/s so với ban đầu. Giá trị của v là', 2, 'a'),
+(41, ' Kim loại Fe không phản ứng với dung dịch', 3, 'd'),
+(42, 'Hợp chất nào sau đây có tính lưỡng tính?', 3, 'd'),
+(43, 'Trùng hợp propilen thu được polime có tên gọi là', 3, 'a'),
+(44, ' Chất nào sau đây tác dụng được với dung dịch AgNO3 trong NH3?', 3, 'd'),
+(45, 'Kim loại nào sau đây có nhiệt độ nóng chảy thấp nhất?', 3, 'c'),
+(46, 'Cho vài giọt quỳ tím vào dung dịch NH thì dung dịch chuyển thành', 3, 'c'),
+(47, ' Dung dịch chất nào sau đây có thể hòa tan được CaCO3 ?', 3, 'a'),
+(48, 'Kim loại nào sau đây phản ứng được với dung dịch NaOH?', 3, 'a'),
+(49, ' Chất nào sau đây là muối axit?', 3, 'c'),
+(50, ' Công thức phân tử của etanol là', 3, 'c'),
+(51, ' Fructozơ là một loại monosaccarit có nhiều trong mật ong, có vị ngọt sắc. Công thức phân tử\r\ncủa fructozơ là', 3, 'a'),
+(52, ' Một trong những nguyên nhân gây tử vong trong nhiều vụ cháy là do nhiễm độc khí X. Khi vào cơ thể, khí X kết hợp với hemoglobin, làm giảm khả năng vận chuyển oxi của máu. Khí X là', 3, 'b'),
+(53, 'Dẫn khí CO dư qua ống sứ đựng 7,2 gam bột FeO nung nóng, thu được hỗn hợp khí X. Cho\r\ntoàn bộ X vào nước vôi trong dư, thu được m gam kết tủa. Biết các phản ứng xảy ra hoàn toàn. Giá trị', 3, 'b'),
+(54, 'Cặp chất nào sau đây cùng tồn tại trong một dung dịch?', 3, 'a'),
+(55, ' Thủy phân este X trong dung dịch axit, thu được CH3COOH và CH3OH. Công thức cấu tạo của X là', 3, 'd'),
+(56, 'Cho 15 gam hỗn hợp gồm hai amin đơn chức tác dụng vừa đủ với V ml dung dịch HCl 0,75M,\r\nthu được dung dịch chứa 23,76 gam hỗn hợp muối. Giá trị của V là', 3, 'a'),
+(57, ' Cho 0,9 gam glucozơ (C6H12O6) tác dụng hết với lượng dư dung dịch AgNO3 trong NH3\r\nđược m gam Ag. Giá trị của m là', 3, 'b'),
+(58, ' Cho 11,2 lít (đktc) hỗn hợp X gồm C2H2 và H2 qua bình đựng Ni (nung nóng), thu được hỗn hợp Y (chỉ chứa ba hiđrocacbon) có tỉ khối so với H2 là 14,5. Biết Y phản ứng tối đa với a mol Br2 trong dung dịch. Giá trị của a là', 3, 'd'),
+(59, ' Cho các phát biểu sau:\r\n (a) Thủy phân triolein, thu được etylen glicol.\r\n (b) Tinh bột bị thủy phân khi có xúc tác axit hoặc enzim.\r\n (c) Thủy phân vinyl fomat, thu được hai sản phẩm đều có phản ứng tráng bạc.\r\n (d) Trùng ngưng axit ε-aminocaproic, thu được policaproamit.\r\n (e) Chỉ dùng quỳ tím có thể phân biệt ba dung dịch: alanin, lysin, axit glutamic.\r\n (g) Phenylamin tan ít trong nước nhưng tan tốt trong dung dịch HCl.', 3, 'c'),
+(60, ' Cho các chất: Cr, FeCO3 , Fe(NO3)2 , Fe(OH)3 , Cr(OH)3 , Na2CrO4 . Số chất phản ứng được với dung dịch HCl là', 3, 'd'),
+(61, 'Ở thực vật sống trên cạn, nước và ion khoáng được hấp thụ chủ yếu bởi cơ quan nào sau đây?', 4, 'd'),
+(62, 'Ở thực vật, nguyên tố dinh dưỡng khoáng thiết yếu nào sau đây là nguyên tố đại lượng?', 4, 'a'),
+(63, 'Phương pháp nào sau đây có thể được ứng dụng để tạo ra sinh vật mang đặc điểm của hai loài?', 4, 'c'),
+(64, 'Vào mùa sinh sản, các cá thể cái trong quần thể cò tranh giành nhau nơi thuận lợi để làm tổ.\r\nĐây là ví dụ về mối quan hệ', 4, 'b'),
+(65, 'Khu sinh học nào sau đây có độ đa dạng sinh học cao nhất?', 4, 'b'),
+(66, ' Động vật nào sau đây có hệ tuần hoàn kín?', 4, 'c'),
+(67, ' Loại axit nuclêic nào sau đây là thành phần cấu tạo của ribôxôm?', 4, 'a'),
+(68, ' Động vật nào sau đây có quá trình trao đổi khí giữa cơ thể với môi trường diễn ra ở mang?', 4, 'b'),
+(69, ' Một quần thể có thành phần kiểu gen là 0,16 AA : 0,48 Aa : 0,36 aa. Tần số alen A của quần\r\nthể này là', 4, 'c'),
+(70, 'Theo thuyết tiến hóa hiện đại, hiện tượng trao đổi các cá thể hoặc các giao tử giữa các quần thể cùng loài được gọi là', 4, 'c'),
+(71, 'Trong lịch sử phát triển của sinh giới qua các đại địa chất, ở đại nào sau đây phát sinh các nhóm linh trưởng?', 4, 'c'),
+(72, ' Theo lí thuyết, phép lai nào sau đây cho đời con chỉ có kiểu gen đồng hợp tử trội?', 4, 'd'),
+(73, ' Khi nói về các nhân tố tiến hóa theo thuyết tiến hóa hiện đại, phát biểu nào sau đây đúng?', 4, 'b'),
+(74, ' Khi nói về quá trình tiêu hóa thức ăn ở động vật có túi tiêu hóa, phát biểu nào sau đây đúng?', 4, 'd'),
+(75, 'Khi nói về lưới thức ăn, phát biểu nào sau đây đúng?', 4, 'd'),
+(76, ' Một phân tử ADN ở vi khuẩn có tỉ lệ (A + T)/(G + X) = 1/4. Theo lí thuyết, tỉ lệ nuclêôtit loại\r\nA của phân tử này là', 4, 'b'),
+(77, 'Thể đột biến nào sau đây có thể được hình thành do sự thụ tinh giữa giao tử đơn bội với giao\r\ntử lưỡng bội?', 4, 'c'),
+(78, 'Khi nói về kích thước của quần thể sinh vật, phát biểu nào sau đây đúng?', 4, 'b'),
+(79, ' Trên tro tàn núi lửa xuất hiện quần xã tiên phong. Quần xã này sinh sống và phát triển làm\r\ntăng độ ẩm và làm giàu thêm nguồn dinh dưỡng hữu cơ, tạo thuận lợi cho cỏ thay thế. Theo thời gian,\r\nsau cỏ là trảng cây thân thảo, thân gỗ và cuối cùng là rừng nguyên sinh. Theo lí thuyết, khi nói về quá\r\ntrình này, có bao nhiêu phát biểu sau đây đúng?\r\nI. Đây là quá trình diễn thế sinh thái.\r\nII. Rừng nguyên sinh là quần xã đỉnh cực của quá trình biến đổi này.\r\nIII. Độ đa dạng sinh học có xu hướng tăng dần trong quá trình biến đổi này.\r\nIV. Một trong những nguyên nhân gây ra quá trình biến đổi này là sự cạnh tranh gay gắt giữa các loài\r\ntrong quần xã', 4, 'd'),
+(80, 'Khi nói về ổ sinh thái, có bao nhiêu phát biểu sau đây đúng?\r\nI. Các loài có ổ sinh thái về độ ẩm trùng nhau một phần vẫn có thể cùng sống trong một sinh cảnh.\r\nII. Ổ sinh thái của mỗi loài khác với nơi ở của chúng.\r\nIII. Kích thước thức ăn, hình thức bắt mồi,… của mỗi loài tạo nên các ổ sinh thái về dinh dưỡng.\r\nIV. Các loài cùng sống trong một sinh cảnh vẫn có thể có ổ sinh thái về nhiệt độ khác nhau.', 4, 'b'),
+(81, 'Văn học Việt Nam bao gồm các sáng tác nào?', 5, 'b'),
+(82, 'Văn học Việt Nam bao gồm những bộ phận nào?', 5, 'a'),
+(83, 'Dòng nào sau đây không phải là đặc trưng tiêu biểu của văn học dân gian?', 5, 'd'),
+(84, 'Thể loại nào dưới đây không phải của văn học dân gian?', 5, 'd'),
+(85, 'Dòng nào sau đây định nghĩa đúng nhất về văn học viết?', 5, 'a'),
+(86, 'Văn học Việt Nam từ xưa đến nay được viết bằng những thứ chữ nào?', 5, 'a'),
+(87, 'Theo sách giáo khoa, văn học viết Việt Nam từ xưa đến nay đã vận động qua mấy thời kì?', 5, 'c'),
+(88, 'Hai thời đại lớn của lịch sử văn học viết Việt Nam được quy ước gọi là gì?', 5, 'd'),
+(89, 'Nền văn học viết Việt Nam chính thức hình thành vào thời gian nào?', 5, 'd'),
+(90, 'Tác phẩm nào sau đây không phải là văn học chữ Hán?', 5, 'c'),
+(91, 'Tác phẩm nào sau đây không phải là văn học chữ Nôm?', 5, 'b'),
+(92, 'Dòng nào dưới đây không nói lên thành tựu nghệ thuật của văn học Việt Nam?', 5, 'd'),
+(93, 'Hoạt động giao tiếp là gì?', 5, 'd'),
+(94, 'Hai quá trình tạo lập văn bản và lĩnh hội văn bản diễn ra trong quan hệ nào?', 5, 'a'),
+(95, 'Văn học dân gian là gì?', 5, 'b'),
+(96, 'Thần thoại và sử thi giống nhau ở điểm nào?', 5, 'c'),
+(97, 'Dòng nào dưới đây không nói đúng về truyện ngụ ngôn?', 5, 'd'),
+(98, 'Mục đích của truyện cười là gì?', 5, 'a'),
+(99, 'Truyện cổ tích giống với truyện thơ ở điểm nào?', 5, 'd'),
+(100, 'Tại sao nói văn học dân gian là kho tri thức vô cùng phong phú vè đời sống các dân tộc?', 5, 'd'),
+(101, 'Silas is talking to his roommate, Salah, about the Olympic Games.\r\n- Silas: \"Do you think our country can host the Olympic Games some day in the future?\"\r\n- Salah: \"______. We can\'t afford such a big event.\"', 6, 'd'),
+(102, 'Laura is telling Bob about her exam results.\r\n- Laura: \"______\"\r\n- Bob: \"That\'s great. Congratulations!\"', 6, 'b'),
+(103, 'Thanks to high sophisticated technology, scientists have made many important sophisticated discoveries in different fields', 6, 'd'),
+(104, ' It is firmly believed that books are a primary means for disseminating knowledge and information.', 6, 'b'),
+(105, ' With price increases on most necessities, many people have to tighten their belt for fear of tighten their belt\r\ngetting into financial difficulties', 6, 'b'),
+(106, 'Today the number of start-ups in Vietnam is mounting as the government has created mounting favourable conditions for them to develop their business.', 6, 'c'),
+(107, 'Mark the letter A, B, C, or D on your answer sheet to indicate the word whose underlined part differs from the other three in pronunciation in each of the following questions.', 6, 'c'),
+(108, 'Mark the letter A, B, C, or D on your answer sheet to indicate the word whose underlined part differs from the other three in pronunciation in each of the following questions.', 6, 'a'),
+(109, 'Mark the letter A, B, C, or D on your answer sheet to indicate the word that differs from the other three in the position of primary stress in each of the following questions.', 6, 'c'),
+(110, 'Mark the letter A, B, C, or D on your answer sheet to indicate the word that differs from the other three in the position of primary stress in each of the following questions.', 6, 'c'),
+(111, 'It ______ to reason that Jason passed the exam with flying colours on account of his\r\nworking hard during the term', 6, 'c'),
+(112, ' Our father suggested ______ to Da Nang for this summer holiday', 6, 'b'),
+(113, 'The patients ______ with the new drug showed better signs of recovery than those receiving conventional medicine', 6, 'a'),
+(114, ' Only after she ______ from a severe illness did she realise the importance of good health.', 6, 'c'),
+(115, 'Several measures have been proposed to ______ the problem of unemployment among\r\nuniversity graduates.', 6, 'c'),
+(116, 'There is no excuse for your late submission! You ______ the report by last Friday.', 6, 'b'),
+(117, 'The presenter started his speech with a few ______ jokes to build rapport with the\r\naudience', 6, 'b'),
+(118, ' It is advisable that the apprentice should be ______ to learn the ins and outs of the new job', 6, 'd'),
+(119, 'Mary rarely uses social networks, ______?', 6, 'b'),
+(120, 'Candidates are advised to dress formally to make a good ______ on job interviewers.', 6, 'c'),
+(121, 'Trong cuộc khai thác thuộc địa lần thứ nhất (1897 - 1914), tư bản Pháp ở Việt Nam tập trung vào lĩnh vực nào?', 7, 'd'),
+(122, 'I. Gagarin (Liên Xô) là người đầu tiên trên thế giới thực hiện thành công', 7, 'd'),
+(123, 'Một trong những mặt tiêu cực của toàn cầu hóa là', 7, 'a'),
+(124, 'Đầu những năm 70 của thế kỷ XX, Tây Âu trở thành', 7, 'd'),
+(125, 'Hội nghị hợp nhất các tổ chức cộng sản của Việt Nam đầu năm 1930 quyết định thành lập một\r\nđảng duy nhất lấy tên là', 7, 'a'),
+(126, 'Kẻ thù chính của nhân dân Việt Nam sau khi Nhật đảo chính Pháp (9 - 3 - 1945) là', 7, 'a'),
+(127, 'Một trong những mục tiêu của đường lối đổi mới ở Việt Nam được đề ra từ tháng 12 - 1986 là', 7, 'c'),
+(128, ' Theo thỏa thuận tại Hội nghị Pốtxđam (1945), quân đội Trung Hoa Dân quốc vào Việt Nam', 7, 'b'),
+(129, ' Sau chiến thắng Đường số 14 - Phước Long của quân dân miền Nam Việt Nam (tháng 1 - 1975),\r\nchính quyền Sài Gòn đã', 7, 'a'),
+(130, 'Đại hội đại biểu lần thứ II của Đảng (tháng 2 - 1951) quyết định đưa Đảng ra hoạt động\r\ncông khai ở Việt Nam với tên gọi', 7, 'b'),
+(131, 'Vào giữa thế kỷ XIX, trước nguy cơ xâm lược của các nước tư bản phương Tây, triều đình\r\nnhà Nguyễn thực hiện chính sách nào?', 7, 'c'),
+(132, 'Cuộc Cách mạng tháng Mười Nga năm 1917 đã', 7, 'c'),
+(133, 'Năm 1941, Nguyễn Ái Quốc chọn Cao Bằng để xây dựng căn cứ địa cách mạng, vì đây là nơi có', 7, 'b'),
+(134, 'Một trong những nguyên nhân dẫn đến việc Liên Xô và Mỹ cùng tuyên bố chấm dứt Chiến tranh\r\nlạnh (tháng 12 - 1989) là', 7, 'b'),
+(135, ' Thành công của cuộc Tổng tuyển cử bầu Quốc hội (1946) ở Việt Nam chứng tỏ', 7, 'c'),
+(136, ' Điểm khác của khởi nghĩa Yên Thế (1884 - 1913) so với các cuộc khởi nghĩa trong phong trào\r\nCần vương (1885 - 1896) là về', 7, 'c'),
+(137, 'Chiến tranh thế giới thứ hai (1939 - 1945) kết thúc đã', 7, 'c'),
+(138, 'Từ tháng 4 - 1953 đến tháng 7 - 1954, Chính phủ nước Việt Nam Dân chủ Cộng hòa thực hiện', 7, 'a'),
+(139, 'Chủ trương cứu nước của Phan Châu Trinh (đầu thế kỷ XX) không có nội dung nào dưới đây?', 7, 'b'),
+(140, 'Trong chiến lược Chiến tranh đặc biệt (1961 - 1965) ở miền Nam Việt Nam, Mỹ và chính quyền Sài Gòn không thực hiện biện pháp nào dưới đây?', 7, 'c'),
+(141, 'Pháp luật là quy tắc xử sự chung, được áp dụng đối với tất cả mọi người là thể hiện đặc trưng nào dưới đây của pháp luật?', 8, 'a'),
+(142, 'Pháp luật do Nhà nước ban hành và đảm bảo thực hiện', 8, 'a'),
+(143, 'Pháp luật không quy định về những việc nào dưới đây ', 8, 'a'),
+(144, 'Một trong những đặc trưng của pháp luật thể hiện ở', 8, 'a'),
+(145, ' Pháp luật mang bản chất xã hội vì pháp luật', 8, 'a'),
+(146, 'Để quản lí xã hội, Nhà nước cần sử dụng phương tiện quan trọng nhất nào dưới đây?', 8, 'a'),
+(147, 'Pháp luật quy định về những việc được làm, việc phải làm và những việc nào dưới đây?', 8, 'a'),
+(148, 'Pháp luật có tính quy phạm phổ biến, vì pháp luật được áp dụng', 8, 'a'),
+(149, 'Nội dung của tất cả các văn bản pháp luật đều phải phù hợp, không được trái với Hiến pháp là thể hiện đặc trưng nào dưới đây của pháp luật?', 8, 'a'),
+(150, 'Các quy phạm pháp luật do Nhà nước ban hành phù hợp với lợi ích của giai cấp cầm quyền là thể hiện bản chất nào dưới đây của phâp luật?', 8, 'b'),
+(151, 'Pháp luật có tính quyền lực, bắt buộc chung, nghĩa là quy định bắt buộc đối với', 8, 'b'),
+(152, 'Pháp luật phản ánh những nhu cầu, lợi ích của giai cấp, tầng lớp khác nhau trong xã hội là thể hiện bản chất nào dưới đây của pháp luật?', 8, 'a'),
+(153, 'Quy định trong các văn bản diễn đạt chính xác, một nghĩa để mọi người đều hiểu đúng và thực hiện đúng là thể hiện đặc trưng nào dưới đây của pháp luật?', 8, 'b'),
+(154, 'Hệ thống quy tắc xử xự chung áp dụng cho mọi cá nhân, tổ chức khi tham gia vào các quan hệ xã hội được gọi là', 8, 'b'),
+(155, 'Pháp luật mang bản chất giai cấp, vì pháp luật do', 8, 'b'),
+(156, 'Luật giao thông đường bộ quy định người đi xe mô tô phải đội mũ bảo hiểm. Quy định này thể hiện', 8, 'b'),
+(157, 'Pháp luật không bao gồm đặc trưng nào dưới đây ?', 8, 'b'),
+(158, 'Nhà nước quản lí xã hội bằng pháp luật có nghĩa là Nhà nước ban hành pháp luật và', 8, 'a'),
+(159, 'Pháp luật bắt nguồn từ xã hội, do các thành viên của xã hội thực hiện, vì sự phát triển của xã hội là thể hiện bản chất nào dưới đây của pháp luật ?', 8, 'b'),
+(160, 'Pháp luật là phương tiện đặc thù đề thể hiện và bảo vệ các giá trị đạo đức – là thể hiện các mối quan hệ nào dưới đây ?', 8, 'b'),
+(161, '', 1, 'a');
 
 -- --------------------------------------------------------
 
@@ -219,10 +282,10 @@ INSERT INTO `chitietmon` (`id_ctm`, `tieude_ctm`, `noidung_ctm`, `id_ndm`) VALUE
 --
 
 CREATE TABLE `comment` (
-  `cm_id` int(10) UNSIGNED NOT NULL,
+  `cm_id` int(10) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `message` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `time` date NOT NULL,
+  `time` datetime NOT NULL,
   `id_tt` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -231,7 +294,19 @@ CREATE TABLE `comment` (
 --
 
 INSERT INTO `comment` (`cm_id`, `name`, `message`, `time`, `id_tt`) VALUES
-(1, 'dâd', 'gddsa', '2018-12-30', 1);
+(14, 'anh hieu', 'hay', '2019-01-02 22:13:38', 1),
+(15, 'anh', 'aaa', '2019-01-02 22:20:41', 1),
+(20, 'nguyenhieu', 'sasas', '2019-01-02 22:35:53', 1),
+(50, 'anh hieu', 'aa\naa\n', '2019-01-03 01:48:26', 2),
+(51, 'fgg', 'cad', '2019-01-03 03:05:20', 2),
+(53, 'ff', 'sf', '2019-01-03 03:39:00', 2),
+(54, 'w', 'w', '2019-01-03 03:53:55', 2),
+(55, 'aas', 'aa', '2019-01-03 03:54:29', 7),
+(56, 'nguyen hieu', 'haha', '2019-01-03 03:55:07', 7),
+(57, 'nguyen hieu', 'haha', '2019-01-03 03:55:47', 7),
+(58, 'fs', 's', '2019-01-03 03:58:25', 7),
+(59, 'nguyen hieu', 'aaa', '2019-01-03 04:06:05', 5),
+(60, 'anh hieu', 'hihi\nhaha', '2019-01-03 04:06:35', 5);
 
 -- --------------------------------------------------------
 
@@ -385,89 +460,147 @@ INSERT INTO `phuongan1` (`idde1`, `id1`, `a`, `b`, `c`, `d`) VALUES
 (17, 17, '4/455', '24/455', '4/165', '33/91'),
 (18, 18, '201', '2', '9', '54'),
 (19, 19, ' x= − 1; y = − 3', 'x = − 1; y = − 1', ' x = 1; y = − 1', 'x = 1; y = − 3'),
-(20, 20, ' 9,7.a(đồng)', '97,03.a(đồng)', '90,7(đồng)', '9,07(đồng)');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `phuongan2`
---
-
-CREATE TABLE `phuongan2` (
-  `idde2` int(10) NOT NULL,
-  `id2` int(10) NOT NULL,
-  `a` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `b` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `c` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `d` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `phuongan2`
---
-
-INSERT INTO `phuongan2` (`idde2`, `id2`, `a`, `b`, `c`, `d`) VALUES
-(1, 1, 'Ala-Val-Phe-Gly', 'Val-Phe-Gly-Ala.', 'Gly-Ala-Phe -Val', ' Gly-Ala-Val-Phe'),
-(2, 2, '11,66g', '10,41g', '9,04g', '9,328g'),
-(3, 3, '48g', '24g', '40g', '50g'),
-(4, 4, 'metyl axetat', 'propyl fomiat', 'etyl axetat', 'metyl fomiat'),
-(5, 5, ' Khử glucozơ bằng H2/Ni, t0', 'Oxi hoá glucozơ bằng AgNO3/NH3', ' Lên men glucozơ bằng xúc tác enzim', 'Oxi hoà glucozơ bằng Cu(OH)2 đun nóng'),
-(6, 6, 'propyl fomat', 'ancol etylic', 'metyl propionat', ' etyl axetat'),
-(7, 7, 'Cu', 'Al', 'Mg', 'Zn'),
-(8, 8, '4', '5', '3', '2'),
-(9, 9, 'Khối lượng lá kẽm tăng 0,215 gam', 'Khối lượng lá kẽm tăng 0,755 gam', 'Khối lượng lá kẽm giảm 0,755 gam', 'Khối lượng lá kẽm tăng 0,43 gam'),
-(10, 10, 'este đơn chức', 'phenol', 'glixerol', 'ancol đơn chức'),
-(11, 11, 'K+', 'Mg2+', 'Cu2+', 'Na+'),
-(12, 12, 'CH3COONa và C2H5OH', 'HCOONa và C2H5OH', 'C2H5COONa và CH3OH', 'CH3COONa và CH3OH'),
-(13, 13, 'đơn chức.', ' no, mạch hở', 'đơn chức no, mạch hở', 'hai chức no, mạch hở'),
-(14, 14, 'H2N-CH2CH2CONH-CH2COOH', 'H2N-CH2CONH-CH(CH3)-COOH', 'H2N-CH2CONH-CH2CONH-CH2COOH', 'H2N-CH2CH2CONH-CH2CH2COOH'),
-(15, 15, '6', '4', '3', '5'),
-(16, 16, 'đều tạo được dung dịch màu xanh lam khi tác dụng với Cu(OH)2\"', 'là hai dạng thù hình của cùng một chất\".', 'đều có nhóm chức CHO trong phân tử\".', 'đều tồn tại chủ yếu ở dạng mạch hở\".'),
-(17, 17, '16,68 gam', '17,80 gam.', '18,24 gam', '18,38 gam'),
-(18, 18, ' C6H5CH=CH2', 'CH2=C(CH3)COOCH3.', 'H3COOCH=CH2', 'CH2 =CHCOOCH3.'),
-(19, 19, 'axit axetic', 'Fructozơ', 'Glucozơ.', 'Saccarozơ.'),
-(20, 20, 'Phân biệt glucozơ và saccarozơ bằng phản ứng tráng gương', 'Phân biệt mantozơ và saccarozơ bằng phản ứng tráng gương', 'Phân biệt saccarozơ và glixerol bằng Cu(OH)2.', 'Phân biệt tinh bột và xenlulozơ bằng I2.');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `phuongan3`
---
-
-CREATE TABLE `phuongan3` (
-  `idde3` int(10) NOT NULL,
-  `id3` int(10) NOT NULL,
-  `a` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `b` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `c` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `d` varchar(300) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `phuongan3`
---
-
-INSERT INTO `phuongan3` (`idde3`, `id3`, `a`, `b`, `c`, `d`) VALUES
-(1, 1, '4T', '0,5T', 'T', '2T'),
-(2, 2, 'Sóng cực ngắn, sóng ngắn, sóng trung, sóng dài.', 'Sóng dài, sóng ngắn, sóng trung, sóng cực ngắn.', 'Sóng cực ngắn, sóng ngắn, sóng dài, sóng trung', ' Sóng dài, sóng trung, sóng ngắn, sóng cực ngắn.'),
-(3, 3, ' 50√2 V', ' 100√2 V', ' 100 V', ' 50 V'),
-(4, 4, '2mc.', ' m(c^2)', ' 2m(c^2)', 'mc'),
-(5, 5, 'Tia laze là ánh sáng trắng', 'Tia laze có tính định hướng cao', 'Tia laze có tính kết hợp cao', 'Tia laze có cường độ lớn'),
-(6, 6, 'Giảm tiết diện dây dẫn', 'Tăng điện áp hiệu dụng ở nơi phát điện', 'Giảm điện áp hiệu dụng ở nơi phát điện.', 'Tăng chiều dài dây dẫn'),
-(7, 7, 'qE/d', 'qEd', '2qEd', 'E/qd'),
-(8, 8, 'Dao động cưỡng bức có chu kì luôn bằng chu kì của lực cưỡng bức.', 'Biên độ của dao động cưỡng bức phụ thuộc vào biên độ của lực cưỡng bức.', ' Dao động cưỡng bức có tần số luôn bằng tần số riêng của hệ dao động.\r\n', ' Biên độ của dao động cưỡng bức phụ thuộc vào tần số của lực cưỡng bức'),
-(9, 9, 'B = 2.10^-7(r/l)', 'B = 2.10^7(r/l)', 'B = 2.10^-7(I/l)', 'B = 2.10^7(I/l)'),
-(10, 10, '1cm', '4cm', '2cm', '0,25cm'),
-(11, 11, '0,12 V', '0,15 V', '0,30 V', '0,24 V'),
-(12, 12, ' 400 rad/s', ' 0,1 rad/s', ' 20 rad/s', ' 0,2 rad/s'),
-(13, 13, ' 6,625.10^-19 J', ' 6,625.10^-28 J', ' 6,625.10^-25 J', ' 6,625.10^-22 J'),
-(14, 14, ' 600 nm', ' 720 nm', ' 480 nm', ' 500 nm'),
-(15, 15, 'P2=0,5P1', 'P2=2P1', 'P2=P1', 'P2=4P1'),
-(16, 16, '15cm', '20cm', '30cm', '40cm'),
-(17, 17, '8', '6', '3', '4'),
-(18, 18, ' 1,78.10^7 m/s', ' 3,27.10^6 m/s', '8.10^7 m/s', '2.76.10^7 m/s'),
-(19, 19, '80cm va 20cm', '20cm va 40cm', '20cm va 80cm', '40cm va 20cm'),
-(20, 20, ' 0,625', ' 0,866', ' 0,500', ' 0,707');
+(20, 20, ' 9,7.a(đồng)', '97,03.a(đồng)', '90,7(đồng)', '9,07(đồng)'),
+(21, 21, '4T', '0,5T', '2T', 'T'),
+(22, 22, ' Sóng cực ngắn, sóng ngắn, sóng trung, sóng dài.', 'Sóng dài, sóng ngắn, sóng trung, sóng cực ngắn.', 'Sóng cực ngắn, sóng ngắn, sóng dài, sóng trung.', ' Sóng dài, sóng trung, sóng ngắn, sóng cực ngắn'),
+(23, 23, 'lục', 'cam', 'đỏ', 'tím'),
+(24, 24, '2mc', 'mc^2', '2mc^2', 'mc'),
+(25, 25, ' Tia laze là ánh sáng trắng', 'Tia laze có tính định hướng cao', 'Tia laze có tính kết hợp cao.', 'Tia laze có cường độ lớn.'),
+(26, 26, ' Giảm tiết diện dây dẫn', ' Tăng điện áp hiệu dụng ở nơi phát điện', ' Giảm điện áp hiệu dụng ở nơi phát điện', 'Tăng chiều dài dây dẫn.'),
+(27, 27, 'qE/d', 'qEd', '2qEd', 'E/qd'),
+(28, 28, 'Dao động cưỡng bức có chu kì luôn bằng chu kì của lực cưỡng bức', 'Biên độ của dao động cưỡng bức phụ thuộc vào biên độ của lực cưỡng bức', 'Dao động cưỡng bức có tần số luôn bằng tần số riêng của hệ dao động.', 'Biên độ của dao động cưỡng bức phụ thuộc vào tần số của lực cưỡng bức'),
+(29, 29, ' B = 2.10^-7 r/l', 'B = 2.10^7 r/l', 'B = 2.10^-7 I/r', 'B = 2.10^7 I/r'),
+(30, 30, '1,0cm', '4,0cm', '2,0cm', '0,25cm'),
+(31, 31, ' 0,12V', ' 0,15V', ' 0,3V', ' 0,24V'),
+(32, 32, '400 rad/s', '0,1pi rad/s', '20 rad/s', '0,2pi rad/s'),
+(33, 33, '600 nm', '720 nm', '480 nm', '500 nm'),
+(34, 34, ' 15 cm', ' 20 cm', ' 30 cm', ' 40 cm'),
+(35, 35, '8', '6', '3', '4'),
+(36, 36, ' 80 cm và 20 cm', ' 20 cm và 40 cm', ' 20 cm và 80 cm', ' 40cm và 20 cm'),
+(37, 37, '5', '6', '4', '7'),
+(38, 38, ' 0,625', '0,866', ' 0,500', '0,707'),
+(39, 39, '8 cm', '14 cm', '10 cm', '12 cm'),
+(40, 40, '1,78.10^7m/s', '3,27.10^6m/s', '8.10^7m/s', '2,67.10^6m/s'),
+(41, 41, 'HCl', 'AgNO3', 'CuSO4', 'NaNO3'),
+(42, 42, 'CrCl3', 'NaOh', 'KOH', 'Cr(OH)3'),
+(43, 43, 'polipropilen', ' polietilen', ' polistiren', ' poli(vinyl clorua)'),
+(44, 44, 'Metan', 'Etilen', 'Benzen', 'Propin'),
+(45, 45, 'Li', 'Na', 'Hg', 'K'),
+(46, 46, 'màu đỏ', 'màu vàng', 'màu xanh', 'màu hồng'),
+(47, 47, 'HCl', 'KCl', 'KNO3', 'NaCl'),
+(48, 48, 'Al', 'Ag', 'Fe', 'Cu'),
+(49, 49, 'CuSO4', 'Na2NO3', 'NaH2PO4', 'NaNO3'),
+(50, 50, 'C2H4O', 'C2H4O2', 'C2H6O', 'C2H6'),
+(51, 51, 'C6H12O6', '(C6H12O6)n', 'C2H4O2', 'C12H22O11'),
+(52, 52, 'N2', 'CO', 'He', 'H2'),
+(53, 53, '5', '10', '7,2', '15'),
+(54, 54, 'NaCl  và Ag(NO3)3', 'NaOH và MgSO4', 'K2CO3 và HNO3', 'NH4Cl và KOH'),
+(55, 55, ' HCOOC2H5', ' CH3COOC2H5', ' C2H5COOCH3', ' CH3COOCH3'),
+(56, 56, '320', '720', '480', '329'),
+(57, 57, '0,52', '1,08', '2,16', '1,62'),
+(58, 58, '0,15', '0,20', '0,25', '0,10'),
+(59, 59, '4', '3', '5', '2'),
+(60, 60, '4', '5', '3', '6'),
+(61, 61, 'Thân', 'Hoa', 'Lá', 'Rễ'),
+(62, 62, 'Lito', 'Sắt', 'Mangan', 'Bo'),
+(63, 63, 'Nuôi cấy hạt phấn', 'Gây đột biến gen', 'Dung hợp tế bào trần', 'Nhân bản vô tính'),
+(64, 64, 'hỗ trợ cùng loà', ' cạnh tranh cùng loài', ' hội sinh', 'hợp tác'),
+(65, 65, ' Rừng mưa nhiệt đới', 'Hoang mạc', ' Rừng lá rụng ôn đới', 'Thảo nguyên'),
+(66, 66, 'Trai sông', 'Chim bồ câu', 'Ốc sên', 'Châu chấu'),
+(67, 67, 'rARN', 'mARN', 'tARN', 'ARN'),
+(68, 68, 'Mèo rừng', 'Tôm sông', 'Chim sâu', 'Ếch đồng'),
+(69, 69, '0,7', '0,3', '0,4', '0,5'),
+(70, 70, 'chọn lọc tự nhiên', 'đột biến', 'di - nhập gen', 'giao phối không ngẫu nhiên'),
+(71, 71, 'Đại Cổ sinh', 'Đại Nguyên sinh', 'Đại Tân sinh', ' Đại Trung sinh'),
+(72, 72, 'AAxAa', 'AaxAa', 'Aaxaa', 'AAxAA'),
+(73, 73, 'Giao phối không ngẫu nhiên luôn dẫn đến trạng thái cân bằng di truyền của quần thể', 'Các yếu tố ngẫu nhiên làm thay đổi tần số alen của quần thể không theo một hướng xác định', 'Đột biến gen cung cấp nguyên liệu thứ cấp cho quá trình tiến hóa.', 'Di - nhập gen chỉ làm thay đổi tần số alen của các quần thể có kích thước nhỏ'),
+(74, 74, 'Trong túi tiêu hóa, thức ăn chỉ được biến đổi về mặt cơ học', 'Thức ăn được tiêu hóa ngoại bào nhờ enzim của lizôxôm', 'Trong ngành Ruột khoang, chỉ có thủy tức mới có cơ quan tiêu hóa dạng túi', 'Thức ăn được tiêu hóa ngoại bào và tiêu hóa nội bào'),
+(75, 75, 'Lưới thức ăn ở rừng mưa nhiệt đới thường đơn giản hơn lưới thức ăn ở thảo nguyên', 'Quần xã càng đa dạng về thành phần loài thì lưới thức ăn càng đơn giản', 'Lưới thức ăn của quần xã vùng ôn đới luôn phức tạp hơn so với quần xã vùng nhiệt đới', ' Trong diễn thế sinh thái, lưới thức ăn của quần xã đỉnh cực phức tạp hơn so với quần xã suy thoái'),
+(76, 76, '25%', '10%', '20%', '40%'),
+(77, 77, 'Thể ba', 'Thể tứ bội', 'Thể tam bội', 'Thể một'),
+(78, 78, 'Kích thước của quần thể là khoảng không gian mà các cá thể của quần thể sinh sống', 'Kích thước quần thể có ảnh hưởng đến mức sinh sản và mức tử vong của quần thể.', 'Nếu kích thước quần thể đạt mức tối đa thì các cá thể trong quần thể thường tăng cường hỗ trợ nhau', ' Kích thước của quần thể luôn ổn định, không phụ thuộc vào điều kiện môi trường'),
+(79, 79, '1', '2', '3', '4'),
+(80, 80, '1', '4', '2', '3'),
+(81, 81, 'Các sáng tác ngôn từ trên đất nước Việt Nam', 'Các sáng tác ngôn từ bằng tiếng Việt', 'Các sáng tác ngôn từ của nhân dân Việt Nam từ xưa đến nay', 'Các sáng tác nghệ thuật của nhân dân Việt Nam từ xưa đến nay'),
+(82, 82, 'Văn học dân gian và văn học viết', 'Văn học dân gian và văn xuôi', 'Văn học dân gian và thơ', 'Văn học dân gian và kịch'),
+(83, 83, 'Văn học dâ gian là sáng tác tập thể', 'Văn học dân gian là sáng tác truyền miệng', 'Văn học dân gian gắn bó mật thiết với đời sống cộng đồng', 'Khi người trí thức tham gia sáng tác vhdg thì sáng tác ấy trở thành tiếng nói riêng của'),
+(84, 84, 'Thần thoạ', 'Ca dao', 'Kịch nói', 'Chèo'),
+(85, 85, 'Văn học viết là những sáng tác ngôn từ bằng chữ viết', 'Văn học viết là những sáng tác nghệ thuật của người trí thức', 'V/học viết là những s/tác của người trí thức, đc ghi lại bằng chữ viết, mang dấu ấn tác giả.', 'Cả 1 và 2'),
+(86, 86, 'Chữ Hán, chữ Nôm, chữ quốc ngữ', 'Chữ Hán, chữ Nôm, chữ quốc ngữ , tiếng Pháp', 'Chữ hán, chữ Nôm, chữ quốc ngữ, tiếng Anh', 'Chữ hán, chữ Nôm, chữ quốc ngữ, tiếng Pháp, tiếng Anh'),
+(87, 87, 'Hai', 'Ba', 'Bốn', 'Năm'),
+(88, 88, 'Văn học cổ đại và văn học hiện đại', 'Văn học cổ đại và văn học trung đại', 'Văn học trung đại và văn học cận đại', 'Văn học trung đại và văn học hiện đại'),
+(89, 89, 'Thế kỉ I, khi Hai Bà Trưng đánh đuổi quân Tô Định, xưng vương và đống đô ở Mê Linh', 'Thế kỉ X, khi Ngô Quyền đánh tan quân Nam Hán, giành được độc lập cho dân tộc', 'Thế kỉ XI, khi Lí Thái Tổ dời đô ra Thăng Long', 'Cả 1, 2 và 3 đều sai'),
+(90, 90, 'Nam quốc sơn hà (Lí Thường Kiệt)', 'Truyền kì mạn lục (Nguyễn Dữ)', 'Thăng Long thành hoài cổ (Bá Huyện Thanh Quan)', 'Bình Ngô đại cáo (Nguyễn Trãi)'),
+(91, 91, 'Quốc âm thi tập (Nguyễn Trãi)', 'Vũ trung tùy bút (Phạm Đình Hổ)', 'Bánh trôi nước (Hồ Xuân Hương)', 'Thu điếu (Nguyễn Khuyến)'),
+(92, 92, 'Xây dựng hệ thống thể loại văn học dân tộc', 'Xây dựng tiếng Việt thành một ngôn ngữ văn học', 'Tiếp thu, sáng tạo kinh nghiệm nghệ thuật của văn học thế giới', ' Nuôi dưỡng và bồi đắp tâm hồn Việt Nam'),
+(93, 93, 'Là hoạt động diễn ra giữa mọi người trong xã hội', 'Là hoạt động được tiến hành chủ yếu bằng phương tiện ngôn ngữ (nói hoặc viết)', 'Là hoạt động nhằm thực hiện những mục đích về nhận thức, về tình cảm, về hành động', 'Cả 1, 2 và 3 đều đúng'),
+(94, 94, 'Quan hệ song song', 'Quan hệ tương tác', 'Quan hệ nhân quả', 'Quan hệ tương phản'),
+(95, 95, 'Là những tác phẩm văn học viết về nhân dân, phục vụ cho nhân dân', 'Là những t/phẩm ng/thuật ngôn từ tr/miệng, s/phẩm của qtrình sáng tác tt nhằm mục đích phục vụ trực tiếp cho các sinh hoạt khác nhau trong đời sống cộng đồng', 'Cả 1 và 2 đều đúng', 'Cả 1 và 2 đều sai'),
+(96, 96, 'Đều là tác phẩm tự sự dân gian', 'Đều kể về các vị thần', ' Đều kể về những biến cố lớn diễn ra trong đời sống cộng đồng', 'Đều sử dụng ngôn ngữ có vần, nhịp'),
+(97, 97, 'Là tác phẩm tự sự dân gian ngắn, có kết cấu chặt chẽ', 'Thông qua các ẩn dụ (phần lớn là h/tượng loài vật) để kể về n~ sự việc lquan đến con người', 'Nêu lên những bài học kinh nghiệm về cuộc sống hoặc về triết lí nhân sinh', 'Kết thúc truyện bất ngờ'),
+(98, 98, ' Giải trí và phê phán xã hội', 'Đúc kết kinh nghiệm thực tiễn', ' Giải trí, rèn luyện tư duy và cung cấp tri thức', 'Thông báo và bình luận sự kiện thời sự'),
+(99, 99, 'Là tác phẩm tự sự dân gian bằng thơ', 'Giàu chất trữ tình', 'Đối tượng đề cập chủ yếu là những con người bình thường trong xã hội', 'Cả 3 ý trên'),
+(100, 100, 'Vì tri thức trong vhọc dgian thuộc đủ mọi lĩnh vực của đsống : t/nhiên, xã hội và con người', 'Vì tri thức dân gian là những kinh nghiệm lâu đời được nhân dân đúc kết từ thực tiễn', 'Vì mỗi tộc người trong 54 tộc người của dân tộc VN đều có kho tàng vhdg riêng, p/ánh đ/sống của chính mình', 'Cả 3 ý trên'),
+(101, 101, 'You can say that again', ' I can\'t agree with you more', 'Yes, you\'re right', ' No, I don\'t think so'),
+(102, 102, 'I hope I\'ll pass the exam tomorrow', ' I\'ve passed the exam with an A.', ' I\'ll get the exam results tomorrow.', ' I didn\'t do well in the exam.'),
+(103, 103, 'accessible', 'confusing', 'effective', 'advanced'),
+(104, 104, 'classifying', 'distributing', ' adopting', 'inventing'),
+(105, 105, 'dress in loose clothes', ' spend money freely', 'save on daily expenses', 'put on tighter belts'),
+(106, 106, 'peaking', 'varying', 'decreasing', ' rising'),
+(107, 107, 'delays', 'begins', 'attracts', 'believes'),
+(108, 108, 'head', 'bean', 'meal', 'team'),
+(109, 109, ' sympathy', 'poverty', 'equipment', 'character'),
+(110, 110, ' intend', 'install', ' follow', 'decide'),
+(111, 111, 'comes', 'gets', ' stands', 'lays'),
+(112, 112, 'to going', 'going', ' go', 'to go'),
+(113, 113, 'treated', ' having treated', 'treating', 'who treated'),
+(114, 114, ' would recover', 'has recovered', 'had recovered', 'was recovering'),
+(115, 115, 'pose', 'admit', 'address', ' create'),
+(116, 116, ' mightn\'t have finished', ' should have finished', ' needn\'t have finished', 'must have finished'),
+(117, 117, ' whole-hearted', 'light-hearted', ' soft-hearted', 'kind-hearted'),
+(118, 118, 'permissive', 'noticeable', ' acceptable', 'observant'),
+(119, 119, ' isn\'t she', ' does she', ' doesn\'t she', 'is she'),
+(120, 120, ' impress', 'impressively', 'impression', 'impressive'),
+(121, 121, ' Công nghiệp hóa chất', ' Chế tạo máy.', ' Luyện kim', 'Khai thác mỏ'),
+(122, 122, 'hành trình khám phá sao Hỏa', 'kế hoạch thám hiểm sao Mộc.', ' hành trình chinh phục Mặt Trăng', 'chuyến bay vòng quanh Trái Đất.'),
+(123, 123, ' tạo ra nguy cơ đánh mất bản sắc dân tộc.', 'kìm hãm sự phát triển của lực lượng sản xuất.', 'hạn chế sự chuyển biến về cơ cấu kinh tế.', 'hạn chế sự tăng trưởng kinh tế.'),
+(124, 124, ' trung tâm kinh tế - tài chính duy nhất của thế giới', 'trung tâm kinh tế - tài chính lớn nhất thế giới', 'liên minh kinh tế - tài chính - quân sự lớn nhất thế giới.', 'một trong ba trung tâm kinh tế - tài chính lớn của thế giới'),
+(125, 125, 'Đảng Cộng sản Việt Nam', 'Đảng Lao động Việt Nam', 'Đảng Dân chủ Việt Nam', 'Đảng Cộng sản Đông Dương'),
+(126, 126, ' phát xít Nhật', 'đế quốc Pháp.', 'đế quốc Pháp và tay sai.', ' đế quốc Pháp - Nhật'),
+(127, 127, 'bước đầu khắc phục hậu quả chiến tranh', 'hoàn thiện cơ chế quản lý đất nước.', 'đưa đất nước ra khỏi tình trạng khủng hoảng', 'hoàn thành công cuộc cải cách ruộng đất.'),
+(128, 128, 'vĩ tuyến 17 trở vào Nam', 'vĩ tuyến 16 trở ra Bắc.', 'vĩ tuyến 16 trở vào Nam', 'vĩ tuyến 17 trở ra Bắc'),
+(129, 129, 'đưa quân đến hòng chiếm lại nhưng thất bại', ' phản ứng yếu ớt, chủ yếu dùng áp lực đe dọa từ xa', 'nhanh chóng rút quân để bảo toàn lực lượng.', 'phối hợp với quân đội Mỹ phản công tái chiếm'),
+(130, 130, 'Đảng Dân chủ Việt Nam.', 'Đảng Lao động Việt Nam', 'Đảng Dân chủ Đông Dương', 'Đảng Cộng sản Việt Nam'),
+(131, 131, 'Cải cách, mở cửa', ' Tự do tôn giáo', 'Bế quan tỏa cảng', ' Cải cách văn hóa.'),
+(132, 132, 'dẫn đến tình trạng hai chính quyền song song tồn tại', ' giúp Nga hoàn thành mục tiêu xây dựng chủ nghĩa xã hội', 'đưa nhân dân Nga lên làm chủ vận mệnh của mình', ' giúp Nga đẩy lùi được nguy cơ ngoại xâm và nội phản'),
+(133, 133, 'lực lượng vũ trang phát triển lớn mạnh', ' địa hình thuận lợi để phát triển lực lượng.', ' nhiều căn cứ du kích đã được xây dựng.', 'các tổ chức cứu quốc đã được thành lập.'),
+(135, 135, ' sự ủng hộ to lớn của cộng đồng quốc tế đối với Việt Nam', ' quyền lực nhà nước chính thức thuộc về cơ quan hành pháp.', 'nhân dân có tinh thần đoàn kết và ý thức làm chủ đất nước', 'nhân dân bước đầu giành chính quyền, làm chủ đất nước'),
+(136, 136, 'phương pháp đấu tranh.', 'lực lượng chủ yếu', ' xuất thân của người lãnh đạo.', 'kết quả đấu tranh.'),
+(137, 137, 'tạo nên sự cân bằng về thế và lực giữa các nước tư bản', 'mở ra thời kỳ khủng hoảng kéo dài của chủ nghĩa tư bản', ' tạo ra những thay đổi căn bản trong tình hình thế giới.', 'giải quyết được mâu thuẫn giữa đế quốc với thuộc địa'),
+(138, 138, 'cải cách ruộng đất ở một số nơi trong vùng tự do', 'giảm tức và xóa nợ ở những vùng gặp thiên tai.', ' giảm tô và hoãn nợ trong các vùng có chiến sự.', 'chia lại công điền và công thổ ở vùng Pháp tạm chiếm.'),
+(139, 139, 'Đề cao cải cách, duy tân nhằm nâng cao dân trí và dân quyền', 'Đánh đuổi giặc Pháp, thành lập Cộng hòa Dân quốc Việt Nam', 'Chấn hưng thực nghiệp, lập hội kinh doanh, phát triển kinh tế', 'Dựa vào Pháp đánh đổ ngôi vua và chế độ phong kiến lạc hậu'),
+(140, 140, ' Triển khai hoạt động chống phá miền Bắc', 'Tiến hành các cuộc hành quân càn quét.', 'Mở những cuộc hành quân “tìm diệt”.', 'Tiến hành dồn dân lập “ấp chiến lược”'),
+(141, 141, 'Tính quy phạm phổ biến', 'Tính phổ cập', 'Tính rộng rãi', 'Tính nhân văn'),
+(142, 142, 'Bằng quyền lực Nhà nước.', 'Bằng chủ trương của Nhà nước', 'Bằng chính sách của Nhà nước.', 'Bằng uy tín của Nhà nước'),
+(143, 143, 'Nên làm', 'Được làm.', 'Phải làm ', 'Không được làm'),
+(144, 144, 'tính quyền lực, bắt buộc chung', 'tính hiện đại', 'tính cơ bản', 'tính truyền thống'),
+(145, 145, ' bắt nguồn từ thực tiễn đời sống xã hội.', 'do Nhà nước ban hành', 'luôn tồn tại trong mọi xã hội', 'phản ánh lợi ích của giai cấp cầm quyền'),
+(146, 146, 'Pháp luật', 'Giáo dục', 'Thuyết phục ', 'Tuyên truyền'),
+(147, 147, 'Không được làm', 'Không nên làm', 'Cần làm', 'Sẽ làm'),
+(148, 148, 'trong mọi lĩnh vực của đời sống xã hội', 'trong một số lĩnh vực quan trọng', 'đối với người vi phạm', 'đối với người sản xuất kinh doanh'),
+(149, 149, 'Tính xác định chặt chẽ về mặt hình thức.', 'Tính quy phạm phổ biến', 'Tính phù hợp về mặt nôi dung', 'Tính bắt buộc chung'),
+(150, 150, 'Bản chất xã hội', 'Bản chất giai cấp', 'Bản chất nhân dân', 'Bản chất dân tộc'),
+(151, 151, 'mọi người từ 18 tuổi trở lên', 'mọi cá nhân tổ chức', 'mọi đối tượng cần thiết', 'mọi cán bộ, công chức'),
+(152, 152, 'Bản chất xã hội', 'Bản chất giai cấp', 'Bản chất nhân dân', 'Bản chất hiện đại'),
+(153, 153, 'Tính quy phạm phổ biến.', 'Tính xác định chặt chẽ về mặt hình thức', 'Tính chặt chẽ và thuận lợi khi sử dụng', 'Tính quần chúng nhân dân'),
+(154, 154, 'chính sách', 'pháp luật', 'chủ trương', 'văn bản'),
+(155, 155, 'nhân dân ban hành', 'Nhà nước ban hành', 'chính quyền các cấp ban hành', 'các đoàn thể quần chúng ban hành'),
+(156, 156, 'tính chất chung của pháp luật', 'tính quy phạm phổ biến của pháp luật', 'tính phù hợp của pháp luật', 'tính phổ biễn rộng rãi của pháp luật'),
+(157, 157, 'Tính quy phạm phổ biến', ' Tính cụ thể về mặt nội dung', 'Tính quyền lực, bắt buộc chung', 'Tính xác định chặt chẽ về mặt hình thức'),
+(158, 158, 'tổ chức thực hiện pháp luật', 'xây dựng chủ trương, chính sách', 'xây dựng kế hoạch phát triển đất nước', 'tổ chức thực hiện quyền và nghĩa vụ công dâ'),
+(159, 159, 'Bản chất giai cấp', 'Bản chất xã hội', 'Bản chất tự nhiên', 'Bản chất nhân dân'),
+(160, 160, 'Quan hệ pháp luật với chính trị', 'Quan hệ pháp luật với đạo đức', 'Quan hệ pháp luật với xã hội', 'Quan hệ pháp luật với đạo đức'),
+(161, 161, '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -476,12 +609,32 @@ INSERT INTO `phuongan3` (`idde3`, `id3`, `a`, `b`, `c`, `d`) VALUES
 --
 
 CREATE TABLE `reply` (
-  `rep_id` int(11) NOT NULL,
+  `rep_id` int(10) NOT NULL,
+  `cm_id` int(10) NOT NULL,
   `rep_name` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
   `rep_mess` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rep_date` date NOT NULL,
-  `cm_id` int(11) NOT NULL
+  `rep_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reply`
+--
+
+INSERT INTO `reply` (`rep_id`, `cm_id`, `rep_name`, `rep_mess`, `rep_date`) VALUES
+(1, 51, 'rrr', 'rr', '2019-01-03'),
+(10, 50, 'fg', 'fg', '2019-01-03'),
+(18, 53, 'sf', 'fs', '2019-01-03'),
+(19, 53, 'sf', 'fs', '2019-01-03'),
+(28, 15, 'saa', 'as', '2019-01-03'),
+(29, 15, 'saa', 'as', '2019-01-03'),
+(30, 15, 'saa', 'as', '2019-01-03'),
+(31, 15, 'saa', 'as', '2019-01-03'),
+(32, 15, 'saa', 'as', '2019-01-03'),
+(33, 15, 'saa', 'as', '2019-01-03'),
+(34, 20, 's', 's', '2019-01-03'),
+(35, 20, 's', 's', '2019-01-03'),
+(36, 54, 'ww', 'ww', '2019-01-03'),
+(37, 59, 'qq', 'qq', '2019-01-03');
 
 -- --------------------------------------------------------
 
@@ -531,11 +684,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `lever`, `trangthai`, `verify`) VALUES
 (1, 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 'nguyenhieu25011998@gamil.com', 2, '1', 39059724),
-(2, 'anhhieu1', 'c4ca4238a0b923820dcc509a6f75849b', 'nguyenhieu25011998@gmail.com', 1, '1', 5),
-(3, '1651060901', 'c4ca4238a0b923820dcc509a6f75849b', 'nguyenhieu25011998@gmail.com', 2, '1', 7),
-(6, 'Nguyenhieu', 'c4ca4238a0b923820dcc509a6f75849b', 'nguyenhieu25011998@gmail.com', 1, '1', 291597),
-(7, 'admin1', 'c4ca4238a0b923820dcc509a6f75849b', 'nguyenhieu25011998@gmail.com', 1, '0', 0),
-(8, 'admin111', 'c4ca4238a0b923820dcc509a6f75849b', 'hieunt621@wru.vn', 1, '0', 42998);
+(9, 'anhhieu1', 'c4ca4238a0b923820dcc509a6f75849b', 'nguyenhieu25011998@gmail.com', 1, '1', 46922);
 
 --
 -- Indexes for dumped tables
@@ -546,18 +695,6 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `lever`, `trangthai`
 --
 ALTER TABLE `cauhoi1`
   ADD PRIMARY KEY (`id1`);
-
---
--- Indexes for table `cauhoi2`
---
-ALTER TABLE `cauhoi2`
-  ADD PRIMARY KEY (`id2`);
-
---
--- Indexes for table `cauhoi3`
---
-ALTER TABLE `cauhoi3`
-  ADD PRIMARY KEY (`id3`);
 
 --
 -- Indexes for table `chitietmon`
@@ -594,24 +731,11 @@ ALTER TABLE `phuongan1`
   ADD KEY `id1` (`id1`);
 
 --
--- Indexes for table `phuongan2`
---
-ALTER TABLE `phuongan2`
-  ADD PRIMARY KEY (`idde2`),
-  ADD KEY `id2` (`id2`);
-
---
--- Indexes for table `phuongan3`
---
-ALTER TABLE `phuongan3`
-  ADD PRIMARY KEY (`idde3`),
-  ADD KEY `id3` (`id3`);
-
---
 -- Indexes for table `reply`
 --
 ALTER TABLE `reply`
-  ADD PRIMARY KEY (`rep_id`);
+  ADD PRIMARY KEY (`rep_id`),
+  ADD KEY `fk_` (`cm_id`);
 
 --
 -- Indexes for table `tintuc`
@@ -633,7 +757,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cauhoi1`
 --
 ALTER TABLE `cauhoi1`
-  MODIFY `id1` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id1` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
 -- AUTO_INCREMENT for table `chitietmon`
@@ -645,7 +769,7 @@ ALTER TABLE `chitietmon`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `cm_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cm_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `monhoc`
@@ -663,13 +787,13 @@ ALTER TABLE `noidungmon`
 -- AUTO_INCREMENT for table `phuongan1`
 --
 ALTER TABLE `phuongan1`
-  MODIFY `idde1` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `idde1` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
 -- AUTO_INCREMENT for table `reply`
 --
 ALTER TABLE `reply`
-  MODIFY `rep_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `rep_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `tintuc`
@@ -681,7 +805,7 @@ ALTER TABLE `tintuc`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
@@ -712,16 +836,10 @@ ALTER TABLE `phuongan1`
   ADD CONSTRAINT `phuongan1_ibfk_1` FOREIGN KEY (`id1`) REFERENCES `cauhoi1` (`id1`);
 
 --
--- Constraints for table `phuongan2`
+-- Constraints for table `reply`
 --
-ALTER TABLE `phuongan2`
-  ADD CONSTRAINT `phuongan2_ibfk_1` FOREIGN KEY (`id2`) REFERENCES `cauhoi2` (`id2`);
-
---
--- Constraints for table `phuongan3`
---
-ALTER TABLE `phuongan3`
-  ADD CONSTRAINT `phuongan3_ibfk_1` FOREIGN KEY (`id3`) REFERENCES `cauhoi3` (`id3`);
+ALTER TABLE `reply`
+  ADD CONSTRAINT `fk_` FOREIGN KEY (`cm_id`) REFERENCES `comment` (`cm_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
