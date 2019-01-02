@@ -4,12 +4,21 @@ $(document).ready(function () {
         n=$(".com-name").val();
         id=$(".com-submit").attr("data-newid");
         $.ajax ({
-            url:js/xulycmt.php,
+            url:"js/xulycmt.php",
             type:"post",
-            data:"mess="+m+"&name="+n+"&id="+id,
+            data:{
+                m:m,
+                n:n,
+                id:id
+            },
             async:true,
             success:function(kq){
-                $("#rep li:eg(0)").before(kq);
+                if(kq=1){
+                    alert("thanh cong");
+                }
+                else{
+                    alert("loi");
+                }
             }
         })
         return false;

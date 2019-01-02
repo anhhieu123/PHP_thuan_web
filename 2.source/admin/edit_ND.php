@@ -22,8 +22,10 @@ if(isset($_POST['ok']))
         {
             $catend=$_POST["txtnd"];
         }
-        if($catename && $catend)
+        if(isset($catename) && isset($catend))
         {
+            echo '<p>$catename</p>';
+            echo $catend;
             require('../connection.php');
             $sql="update tintuc set ten_tt='$catename', noidung_tt='$catend' where id_tt=$id";
             mysqli_query($conn,$sql);
@@ -40,7 +42,7 @@ if(isset($_POST['ok']))
                 <table>
                     <tr>
                         <td style="width:100px;">Tiêu đề</td>
-                        <td><textarea cols="105" rows="2" name="txtnd"><?php echo $data['ten_tt'];?></textarea></td>
+                        <td><textarea cols="105" rows="2" name="txtname"><?php echo $data['ten_tt'];?></textarea></td>
                     </tr>
                     <tr>
                         <td style="width:100px;">Nội dung</td>

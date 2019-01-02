@@ -1,4 +1,4 @@
-<h2><p style="text-align:center;color:red;">Đề thi toán</p></h2>
+<h2><p style="text-align:center;color:red;">Đề thi</p></h2>
 <?php
     include("connection.php");
     if(isset($_POST['ook'])){
@@ -29,8 +29,12 @@
 <div id="form1" style="">
     <?php       
         $stt=1;
-        $sql= "select cauhoi1.id1,cauhoi1.cauhoide1,phuongan1.a,phuongan1.b,phuongan1.c,phuongan1.d from cauhoi1,phuongan1 where (cauhoi1.id1=phuongan1.id1)   ORDER BY RAND() LIMIT 10";
-        $result=mysqli_query($conn,$sql);
+        if(isset($_GET['id_mh'])){
+            $id=$_GET['id_mh'];
+            $sql= "select cauhoi1.id1,cauhoi1.cauhoide1,phuongan1.a,phuongan1.b,phuongan1.c,phuongan1.d from cauhoi1,phuongan1 where cauhoi1.id1=phuongan1.id1 and id_mh=$id  ORDER BY RAND() LIMIT 10";
+            $result=mysqli_query($conn,$sql);
+        }
+       
         while($row=mysqli_fetch_object($result)){
             echo "Câu ".$stt.': '.$row->cauhoide1.'</br>';
     ?>	

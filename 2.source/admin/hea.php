@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="user.css">
-    <script language="javacript">
+    <script language="javascript">
     function show_confirm (){
         if(confirm("Bạn chắc chắn muốn xóa? "))
         {
@@ -27,7 +27,7 @@
     <div id="menu">
         <ul id="submenu">
             <li><a href="list_user.php" >Quản lý thành viên</a></li>
-            <li><a href="list_category.php" >Quản lý đề thi</a></li>
+            <li><a href="add_monhoc.php" >Quản lý đề thi</a></li>
             <li><a href="list_ND.php" >Quản lý bài viết</a></li>
             <li><a href="list_comment.php" >Quản lý bình luận</a></li>
             

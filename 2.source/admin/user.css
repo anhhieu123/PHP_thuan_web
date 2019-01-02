@@ -5,7 +5,7 @@
 body{
     width: 800px;
     margin: auto;
-    background: #ccbb8c;
+    background-color: #f7fcf8;
 }
 a{
     text-decoration: none;
@@ -64,4 +64,45 @@ ul{
 }
 #wrapper2 table input{
     padding: 2px;
+}
+#trang{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    border: 1px solid #00cc66;
+}
+#tieude{
+    background-color:#00cc66;
+    color: aliceblue;
+    text-align: center;
+    height:30px;
+    padding:15px;
+}
+#bang{
+    
+  
+    margin-top: 10px;
+   
+}#bang1{
+ 
+    border: 1px solid #00cc66;
+    color: blue;
+}
+#xoa{
+    border: 1px solid #00cc66;
+    margin-top: 1px;
+}
+.sm{
+    margin-top: 1px;
+    padding-left: 80%;
+    background-color: #00cc66;
+    height: 40px;
+}
+.sm input[type="submit"]{
+    padding: 4px;
+    margin-top: 10px;
+    border-bottom: 10px;
+    color:white;
+    background-color: red;
+    border-radius: 5px;
 }
