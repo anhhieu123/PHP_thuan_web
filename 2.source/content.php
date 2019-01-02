@@ -4,7 +4,7 @@
                 <a href="#" ><img src="hinhanh/pd-nangcapvip.png" alt="ondh" /></a>
                 <a href="#"><img src="hinhanh/pd-quyenloivip.png" alt="ondh"  /></a>
                 <a href="tenmon.php"><img src="hinhanh/chuongtrinh-12.png"alt="chuongtrinh12" style="margin: 0px 65px 0px 20px"/></a>
-                <a href="dethi.php"><img src="hinhanh/onthi-daihoc.png" alt="ondh"  /></a>
+                <a href="ondaihoc.php"><img src="hinhanh/onthi-daihoc.png" alt="ondh"  /></a>
             </div>
             <div id="thuvien">
                 <div class="tt">

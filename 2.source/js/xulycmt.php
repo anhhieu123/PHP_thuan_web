@@ -13,6 +13,13 @@
     $sql="insert into comment (name, message, time, id_tt) 
         values('$com_name','$com_mess',now(),$id_tt)";
     if(mysqli_query($conn,$sql)){
-        echo 1;
+        echo"<li style='clear:left;'>";
+        echo"<img src='hinhanh/cmt.png' alt='' >";
+        echo"<div style=' margin-left:3px'>";
+            echo"<b> $com_name </b> <small>&nbsp" .date('d/m/y'). "&nbsp<a href='javascript:void(0)'>Reply</a></small>";
+            $mess=nl2br($com_mess);
+            echo"<p>$mess</p>";
+        echo"</div>";
+        echo"</li>"; 
     }
 ?>

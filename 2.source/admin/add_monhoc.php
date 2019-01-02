@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<header>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" type="text/css" href="user.css"/>
-</header>
-<body>
+<?php
+    require('hea.php');
+?>
 <div id="trang">
-    <div id="tieude">
-        <h3>Hi admin!</h3>
-    </div>
     <div id="bang">
     <form action="inserttracnghiem.php" method="post">
         <div id="bang1">
@@ -66,22 +57,12 @@
         </table>
         </div>
         </div>
-        <div id="xoa">
-        <table>
-            <h4>Xóa câu hỏi</h4>
-            <tr>
-                <td>ID</td>
-                <td></td>
-                <td><input type="text" name="id1"></td>
-            </tr>
-        </table>
-        </div>
-        </div>
+      
         <div class="sm">
             <input type="submit" value="Thêm mới" name="submit" class="nut">
-            <input type="submit" value="Xoa" name="submit1" class="nut">
         </div>
     </form>
 </div>
-</body>
-</html>
+<?php
+    require('foot.php');
+?>

@@ -13,12 +13,7 @@ $(document).ready(function () {
             },
             async:true,
             success:function(kq){
-                if(kq=1){
-                    alert("thanh cong");
-                }
-                else{
-                    alert("loi");
-                }
+                $('.rep').before(kq);
             }
         })
         return false;

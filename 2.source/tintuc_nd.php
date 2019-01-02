@@ -12,6 +12,7 @@ $id=$_GET["id"];
     <link rel="stylesheet" type="text/css" href="flexslider.css"/>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/cmt.js"></script>
+    <script src="js/rep.js"></script>
 
 </head>
 <body>
@@ -93,7 +94,6 @@ $id=$_GET["id"];
                 ?> 
                 <br/>
                 <br/>
-                <a href="noidung.php" ><p style='color:red;text-alig:center;'>>>Quay lại<<</p> </a>
             </div>
             <fieldset>
                 <legend>Comment</legend>           
@@ -105,11 +105,11 @@ $id=$_GET["id"];
                             </tr>
                             <tr>
                                 <td>Mess</td>
-                                <td><textarea cols="60" rows="5" class="com-mess"></textarea></td>
+                                <td><textarea cols="60" rows="3" class="com-mess"></textarea></td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><input type="submit" value="Submit" class="com-submit" data-newid="<?php echo $id; ?>"/></td>
+                                <td><input type="submit" value="Comment" class="com-submit" data-newid="<?php echo $id; ?>"/></td>
                             </tr>
                         </table>
                 
@@ -118,7 +118,7 @@ $id=$_GET["id"];
                 li div {
                     float:left;
                 }
-                 #rep li{
+                 .rep li{
                     clear:left;
                     padding-top:15px;
                 }
@@ -142,53 +142,57 @@ $id=$_GET["id"];
 
                 <fieldset style="width:420px;margin-left:10px;padding:0 0 8px 2px;">
                     <legend> Old comment</legend>
-                    <ul id="rep">
-                        <li style="padding-top:15px; "> 
-                            <img src="hinhanh/cmt.png" alt="" >
-                            <div style=" margin-left:3px">
-                                <b> aaaa </b> <small>&nbsp 10/10/11&nbsp<a href="">Reply</a></small>
-                                <p>ten</p>
-                            </div>
-                                <ul>
-                                    <li>
-                                        <img src="hinhanh/cmt.png" alt="" width=30px>
-                                        <div style=" margin-left:3px">
-                                            <b> aaaa </b> <small>&nbsp 10/10/11</small>
-                                            <p>ten</p>
-                                        </div>
-                                    </li>    
-                                    <li>
-                                        <img src="hinhanh/cmt.png" alt="" width=30px>
-                                        <div style=" margin-left:3px">
-                                            <b> aaaa </b> &nbsp<small> 10/10/11</small>
-                                            <p>ten</p>
-                                        </div>
-                                    </li>   
-                                </ul>
-                                <fieldset style="width:150px; margin-left:30px;">
-                                    <legend>Reply  </legend>
-                                            <table>
-                                                <tr>
-                                                    <td> ReplyName</td>
-                                                    <td><input type="text" size="25" name="txtrepname" class="rep-name"/></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>ReplyMess</td>
-                                                    <td><textarea cols="60" rows="5" name="txtrepmess"class="rep-mess"></textarea></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td><input type="submit" value="Submit" name="ok"/></td>
-                                                </tr>
-                                            </table>                           
-                                </fieldset>
-                        </li>
-                        <li style=" padding-top:15px; ">
-                         <img src="hinhanh/cmt.png" alt="">
-                            <div style=" margin-left:3px">
-                                <b> aaaa </b> <small> 10/10/11<a href="">Reply</a></small>
-                                <p>ten</p>
-                            </div>
+                    <ul class="rep">
+
+                    <?php 
+                        $sql1="select * from comment where id_tt=$id order by cm_id desc ";
+                        $result1=mysqli_query($conn,$sql1);
+                        while($data1 = mysqli_fetch_assoc($result1)){?>
+                        <?php
+                        echo"<li style='padding-top:15px;float:left; '> ";
+                            echo"<img src='hinhanh/cmt.png' alt='' >";
+                            echo"<div style=' margin-left:3px';float:left;>";
+                                $timestamp=strtotime('$data1[time]');
+                                $date=date('d/m/y',$timestamp);
+                                echo"<b> $data1[name] </b> <small>&nbsp $date &nbsp<a href='javascript:void(0)' class='rep_1'data-a='$data1[cm_id]'>Reply</a></small>";
+                                $mess=nl2br($data1['message']);
+                                echo"<p>$mess</p>";
+                            echo"</div>";
+                                echo"<ul class='rep_a$data1[cm_id]'>";  
+                                $sql2="select * from reply where cm_id=$data1[cm_id] order by rep_id desc ";
+                                $result2=mysqli_query($conn,$sql2);
+                                while($data2 = mysqli_fetch_assoc($result2)){                                      
+                                    echo"<li style='clear:left;margin-left:30px;'>";
+                                        echo"<img src='hinhanh/cmt.png' alt='' width=30px>";
+                                        echo"<div style=' margin-left:3px'>";
+                                            $timestamp=strtotime('$data2[rep_date]');
+                                            $date2=date('d/m/y',$timestamp);
+                                            echo"<b> $data2[rep_name] </b> <small>&nbsp; $date2</small>";
+                                            echo"<p> $data2[rep_mess]</p>";
+                                        echo"</div>";
+                                    echo"</li>";     
+                                echo"</ul>";
+                                }
+
+
+                                echo"<fieldset style='width:150px; margin-left:30px;display:none;'class='rep_form$data1[cm_id]'>";
+                                    echo"<legend>Reply  </legend>";
+                                            echo"<table>";
+                                                echo"<tr>";
+                                                    echo"<td> ReplyName</td>";
+                                                    echo"<td><input type='text' size='25'  class='rep-name$data1[cm_id]'/></td>";
+                                                echo"</tr>";
+                                                echo"<tr>";
+                                                echo"<td> ReplyMess</td>";
+                                                    echo"<td><textarea cols='30' rows='2' class='rep-mess$data1[cm_id]'></textarea></td>";
+                                                echo"</tr>";
+                                                echo"<tr>";
+                                                    echo"<td></td>";
+                                                    echo"<td><input type='submit' value='Reply' class='rep-submit' data-comid='$data1[cm_id]'/></td>";
+                                                echo"</tr>";
+                                            echo"</table>";                           
+                                echo"</fieldset>";
+                                    }?>
                         </li>
                         
                     </ul>
