@@ -6,6 +6,7 @@
         <div class="content">
             <div id="thuvien" style="margin:40px 10px 10px 30px ">
               <?php 
+              if(isset($_SESSION['username'])){
                    //khai báo biến host
                   $hostName = 'localhost';
                   // khai báo biến username
@@ -31,6 +32,9 @@
                     <?php 
                   }
                 }
+            } else{
+                echo "<h2>Bạn cần đăng nhập để xem nội dung này!.</h2><a href='loginTk.php'><h3>(Đăng Nhập)</h3></a>";
+            } 
                ?>
             </div>
                

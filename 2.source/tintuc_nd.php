@@ -95,7 +95,7 @@ $id=$_GET["id"];
                 <br/>
                 <br/>
             </div>
-            <fieldset>
+            <fieldset style="background: #CFa;width:420px;margin-left:30px;  ">
                 <legend>Comment</legend>           
                    
                         <table>
@@ -105,7 +105,7 @@ $id=$_GET["id"];
                             </tr>
                             <tr>
                                 <td>Mess</td>
-                                <td><textarea cols="60" rows="3" class="com-mess"></textarea></td>
+                                <td><textarea cols="40" rows="3" class="com-mess"></textarea></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -140,7 +140,7 @@ $id=$_GET["id"];
 
                 </style>
 
-                <fieldset style="width:420px;margin-left:10px;padding:0 0 8px 2px;">
+                <fieldset style="width:420px;margin-left:30px;padding:0 0 20px 2px;background: #CFa;">
                     <legend> Old comment</legend>
                     <ul class="rep">
 
@@ -151,7 +151,7 @@ $id=$_GET["id"];
                         <?php
                         echo"<li style='padding-top:15px;float:left; '> ";
                             echo"<img src='hinhanh/cmt.png' alt='' >";
-                            echo"<div style=' margin-left:3px';float:left;>";
+                            echo"<div style=' margin-left:3px;float:left;'>";
                                 $timestamp=strtotime('$data1[time]');
                                 $date=date('d/m/y',$timestamp);
                                 echo"<b> $data1[name] </b> <small>&nbsp $date &nbsp<a href='javascript:void(0)' class='rep_1'data-a='$data1[cm_id]'>Reply</a></small>";
@@ -197,7 +197,6 @@ $id=$_GET["id"];
                         
                     </ul>
                 </fieldset>
-            <a href="ndtoan.php" ><p style='color:#00cc66;text-alig:center;'>>>Quay lại<<</p> </a> 
            
         </div>
 

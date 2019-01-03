@@ -24,8 +24,6 @@ if(isset($_POST['ok']))
         }
         if(isset($catename) && isset($catend))
         {
-            echo '<p>$catename</p>';
-            echo $catend;
             require('../connection.php');
             $sql="update tintuc set ten_tt='$catename', noidung_tt='$catend' where id_tt=$id";
             mysqli_query($conn,$sql);

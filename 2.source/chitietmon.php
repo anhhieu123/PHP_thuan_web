@@ -26,6 +26,7 @@
         <div class="content">
             <div id="thuvien" style="margin:40px 10px 10px 30px ">
                 <?php
+                if(isset($_SESSION['username'])){
                 if(isset($_GET["id_ndm"])){
                   $id = $_GET ["id_ndm"];} 
                    //khai báo biến host
@@ -46,15 +47,20 @@
                 mysqli_query($connect,"SET NAMES 'UTF8'");
                 $sql = "SELECT * FROM chitietmon WHERE id_ndm = $id ";
                 $result = mysqli_query($connect,$sql);  
-                 $row = mysqli_fetch_array($result);       
-                ?>
-                    <?php
+                 $row = mysqli_fetch_array($result); 
+                    
+                
+                   
                     echo"<h1><p style='color:#00cc66;'>$row[tieude_ctm]</p></h1>";
                     echo"<br/> <br/>";
-                    echo"$row[noidung_ctm]";                  
+                    echo"$row[noidung_ctm]";
+                } else{
+                    echo "<h2>Bạn cần đăng nhập để xem nội dung này!.</h2><a href='loginTk.php'><h3>(Đăng Nhập)</h3></a>";
+                }                  
                     ?> 
                 <br/>
                 <br/>
+                
             </div>
             </div>
         <?php include "sibar.php"; ?>  
