@@ -36,9 +36,9 @@
             //Content
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = 'Send Email from Localhost';
-            $mail->Body    = 'Hello '.$username.'! <br>'.'Bạn là thành viên mới nhất của Slytherin,
-             một cộng đồng chia sẻ ảnh miễn phí.Chúng tôi rất vui khi có bạn và nóng lòng muốn 
-             xem ảnh của bạn.<br>'.'Hãy xác minh địa chỉ email của bạn bằng cách nhấp vào 
+            $mail->Body    = 'Hello '.$username.'! <br>'.'Bạn là thành viên mới nhất của trang hoc,
+             một cộng đồng học miễn phí.Chúng tôi rất vui khi có bạn và nóng lòng muốn 
+             xem tài năng của bạn.<br>'.'Hãy xác minh địa chỉ email của bạn bằng cách nhấp vào 
              liên kết dưới đây <br>'."http://localhost/CSE485_N061821/2.source/verify.php?email=$mail1&verify=$Verification <br>".'Dữ liệu truy cập của bạn:<br>'.'Địa chỉ email: '.$mail1.' <br>'.'Tên người dùng: '.$username.' <br>'."From: hanoi.aptech2018@gmail.com" . "\r\n" ."CC: somebodyelse@example.com";
             $mail->send();
         } catch (Exception $e) {

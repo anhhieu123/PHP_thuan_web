@@ -17,24 +17,13 @@
 			$id=$row["id1"];
 			$sql1="INSERT INTO phuongan1(a,b,c,d,id1) VALUES ('$a','$b','$c','$d','$id')";
          	if(mysqli_query($conn,$sql1)){
-                echo "Thêm mới thành công!<br> <a href='add_monhoc.php'>quay lại</a>"; 
+                header("location:list_dethi.php");
 	         }
 	         else{
 	             echo 'Thêm mới không thành công';
 	         }
         }
     }
-    if(isset($_POST['submit1'])){
-         $id1=$_POST['id1'];
-         $sql5="DELETE from phuongan1 Where (id1=$id1)";
-         if(mysqli_query($conn,$sql5)){
-         	$sql4="DELETE from cauhoi1 Where (id1=$id1)";
-	         if(mysqli_query($conn,$sql4)){
-	         	echo "xóa thành công";
-	         }else{
-	         	echo "xóa thất bại";
-	         }
-	     }
-    }
+ 
     
 ?>
