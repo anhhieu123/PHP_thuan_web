@@ -83,6 +83,12 @@ $id=$_GET["id"];
             <div id="thuvien" style="margin:40px 10px 10px 30px ">
                 <?php
                     require('connection.php');
+                     function capnhat($id){
+                        $sql3="update tintuc set luotxem=luotxem+1
+                        where id_tt=$id";
+                        $result3=mysqli_query($conn,$sql3);
+                     }
+                    
                     $sql="select ten_tt,noidung_tt,id_tt from tintuc where id_tt=$id order by id_tt desc";
                     $result=mysqli_query($conn,$sql);
                     while($data = mysqli_fetch_assoc($result)){?>
@@ -92,6 +98,7 @@ $id=$_GET["id"];
                     echo"$data[noidung_tt]";
                     } 
                 ?> 
+                capnhat($id);
                 <br/>
                 <br/>
             </div>
